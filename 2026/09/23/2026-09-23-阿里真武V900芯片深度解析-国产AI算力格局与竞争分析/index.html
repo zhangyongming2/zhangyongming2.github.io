@@ -1,0 +1,334 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>阿里真武V900芯片深度解析：国产AI算力格局与竞争分析 | 科技与财经观察</title><meta name="author" content="明哥"><meta name="copyright" content="明哥"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="核心逻辑：9月22日云栖大会，平头哥发布训推一体AI芯片真武V900，单芯片性能是上代M890的3倍，216GB显存首次在单卡硬指标上压过英伟达B200和昇腾910C，2027年Q1量产（比原计划提前两个季度）。这不只是一颗芯片的发布，而是阿里”芯片—模型—云”全栈战略的正式亮牌——竞争坐标系正从”单卡对标”转向”系统级竞争”。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里真武V900芯片深度解析：国产AI算力格局与竞争分析">
+<meta property="og:url" content="https://zhangyongming2.github.io/2026/09/23/2026-09-23-%E9%98%BF%E9%87%8C%E7%9C%9F%E6%AD%A6V900%E8%8A%AF%E7%89%87%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90-%E5%9B%BD%E4%BA%A7AI%E7%AE%97%E5%8A%9B%E6%A0%BC%E5%B1%80%E4%B8%8E%E7%AB%9E%E4%BA%89%E5%88%86%E6%9E%90/index.html">
+<meta property="og:site_name" content="科技与财经观察">
+<meta property="og:description" content="核心逻辑：9月22日云栖大会，平头哥发布训推一体AI芯片真武V900，单芯片性能是上代M890的3倍，216GB显存首次在单卡硬指标上压过英伟达B200和昇腾910C，2027年Q1量产（比原计划提前两个季度）。这不只是一颗芯片的发布，而是阿里”芯片—模型—云”全栈战略的正式亮牌——竞争坐标系正从”单卡对标”转向”系统级竞争”。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zhangyongming2.github.io/img/butterfly-icon.png">
+<meta property="article:published_time" content="2026-09-23T00:05:00.000Z">
+<meta property="article:modified_time" content="2026-09-23T00:01:42.908Z">
+<meta property="article:author" content="明哥">
+<meta property="article:tag" content="AI芯片">
+<meta property="article:tag" content="云栖大会">
+<meta property="article:tag" content="半导体">
+<meta property="article:tag" content="国产算力">
+<meta property="article:tag" content="平头哥">
+<meta property="article:tag" content="阿里">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zhangyongming2.github.io/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "阿里真武V900芯片深度解析：国产AI算力格局与竞争分析",
+  "url": "https://zhangyongming2.github.io/2026/09/23/2026-09-23-%E9%98%BF%E9%87%8C%E7%9C%9F%E6%AD%A6V900%E8%8A%AF%E7%89%87%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90-%E5%9B%BD%E4%BA%A7AI%E7%AE%97%E5%8A%9B%E6%A0%BC%E5%B1%80%E4%B8%8E%E7%AB%9E%E4%BA%89%E5%88%86%E6%9E%90/",
+  "image": "https://zhangyongming2.github.io/img/butterfly-icon.png",
+  "datePublished": "2026-09-23T00:05:00.000Z",
+  "dateModified": "2026-09-23T00:01:42.908Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "明哥",
+      "url": "https://zhangyongming2.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zhangyongming2.github.io/2026/09/23/2026-09-23-%E9%98%BF%E9%87%8C%E7%9C%9F%E6%AD%A6V900%E8%8A%AF%E7%89%87%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90-%E5%9B%BD%E4%BA%A7AI%E7%AE%97%E5%8A%9B%E6%A0%BC%E5%B1%80%E4%B8%8E%E7%AB%9E%E4%BA%89%E5%88%86%E6%9E%90/index.html"><link rel="preconnect"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="/"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '阿里真武V900芯片深度解析：国产AI算力格局与竞争分析',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">科技与财经观察</span></a><a class="nav-page-title" href="/"><span class="site-name">阿里真武V900芯片深度解析：国产AI算力格局与竞争分析</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">阿里真武V900芯片深度解析：国产AI算力格局与竞争分析</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-09-23T00:05:00.000Z" title="发表于 2026-09-23 08:05:00">2026-09-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-09-23T00:01:42.908Z" title="更新于 2026-09-23 08:01:42">2026-09-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%95%86%E4%B8%9A%E8%B4%A2%E7%BB%8F/">商业财经</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%95%86%E4%B8%9A%E8%B4%A2%E7%BB%8F/AI%E7%AE%97%E5%8A%9B/">AI算力</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><strong>核心逻辑</strong>：9月22日云栖大会，平头哥发布训推一体AI芯片真武V900，单芯片性能是上代M890的3倍，216GB显存首次在单卡硬指标上压过英伟达B200和昇腾910C，2027年Q1量产（比原计划提前两个季度）。这不只是一颗芯片的发布，而是阿里”芯片—模型—云”全栈战略的正式亮牌——竞争坐标系正从”单卡对标”转向”系统级竞争”。</p>
+<span id="more"></span>
+
+<hr>
+<h2 id="一、真武V900是什么：核心参数"><a href="#一、真武V900是什么：核心参数" class="headerlink" title="一、真武V900是什么：核心参数"></a>一、真武V900是什么：核心参数</h2><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>真武M890（上代）</th>
+<th>真武V900（新一代）</th>
+<th>提升幅度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单芯片性能</td>
+<td>基准</td>
+<td>3倍</td>
+<td>+200%</td>
+</tr>
+<tr>
+<td>显存</td>
+<td>144GB</td>
+<td><strong>216GB</strong></td>
+<td>+50%</td>
+</tr>
+<tr>
+<td>片间互联带宽</td>
+<td>800GB&#x2F;s</td>
+<td><strong>1200GB&#x2F;s</strong></td>
+<td>+50%</td>
+</tr>
+<tr>
+<td>计算精度</td>
+<td>—</td>
+<td>原生支持FP8&#x2F;FP4</td>
+<td>覆盖训练→超低精度推理全场景</td>
+</tr>
+<tr>
+<td>量产时间</td>
+<td>已规模应用</td>
+<td><strong>2027年Q1</strong>（原计划Q3提前）</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<p>其他关键信息：</p>
+<ul>
+<li><strong>架构</strong>：自研并行计算架构，训推一体，覆盖万亿级参数大模型训练与推理全场景</li>
+<li><strong>互联</strong>：通过自研ICN Switch实现千卡全带宽互联+内存统一编址，上千颗芯片像一颗”超级芯片”协同工作</li>
+<li><strong>系统配套</strong>：新一代磐久超节点服务器集成V900+ICN Switch+磐脉网卡+镇岳SSD主控，单一集群可扩展至<strong>50万卡</strong></li>
+<li><strong>商业验证</strong>：真武系列已服务超650家企业客户（中国电信、中国一汽、浦发银行等），累计出货约56万片；基于M890的超节点已跑通Qwen3.8、Kimi K3等超2万亿参数模型</li>
+<li><strong>下一代</strong>：真武J900已预告，计划2028年3月上市</li>
+</ul>
+<h3 id="显存横向对比（国泰海通研报口径）"><a href="#显存横向对比（国泰海通研报口径）" class="headerlink" title="显存横向对比（国泰海通研报口径）"></a>显存横向对比（国泰海通研报口径）</h3><table>
+<thead>
+<tr>
+<th>芯片</th>
+<th>显存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>真武V900</strong></td>
+<td><strong>216GB</strong></td>
+</tr>
+<tr>
+<td>英伟达B200</td>
+<td>192GB</td>
+</tr>
+<tr>
+<td>英伟达H20</td>
+<td>96GB</td>
+</tr>
+<tr>
+<td>华为昇腾910C</td>
+<td>128GB</td>
+</tr>
+<tr>
+<td>寒武纪MLU590</td>
+<td>64GB</td>
+</tr>
+</tbody></table>
+<p>显存是大模型时代的硬门槛——2万亿参数模型按FP8算仅权重就需约2TB显存，单卡显存越大、切分份数越少、卡间通信压力越小。<strong>这是国产AI芯片首次在单卡显存这个硬指标上压过英伟达在售主力产品</strong>。但要注意：制程上与英伟达仍有代差，阿里未公布V900的实测算力数字，外界目前可比的只有代际倍数和交付时间表。</p>
+<hr>
+<h2 id="二、对国内芯片行业的影响"><a href="#二、对国内芯片行业的影响" class="headerlink" title="二、对国内芯片行业的影响"></a>二、对国内芯片行业的影响</h2><h3 id="1-竞争坐标系改变：从”单卡对标”转向”系统级竞争”"><a href="#1-竞争坐标系改变：从”单卡对标”转向”系统级竞争”" class="headerlink" title="1. 竞争坐标系改变：从”单卡对标”转向”系统级竞争”"></a>1. 竞争坐标系改变：从”单卡对标”转向”系统级竞争”</h3><p>国产芯片在单卡制程上追英伟达很难短期实现，V900的打法是把胜负标准从”谁的卡快”改成”<strong>谁能把十万张卡用成一张卡</strong>“。自研ICN互联+超节点+50万卡集群上限，把比拼拉到阿里最有把握的系统工程层面。这对全行业是范式信号：<strong>芯片公司正在变成”系统公司”</strong>。</p>
+<h3 id="2-国产算力”供给确定性”提升，缓解卡脖子焦虑"><a href="#2-国产算力”供给确定性”提升，缓解卡脖子焦虑" class="headerlink" title="2. 国产算力”供给确定性”提升，缓解卡脖子焦虑"></a>2. 国产算力”供给确定性”提升，缓解卡脖子焦虑</h3><p>在海外高端芯片对华供应受限的背景下（Bernstein数据：英伟达在中国AI芯片市场份额2025年约40%，2026年可能降至约8%），V900+2027Q1量产时间表给国内大模型公司提供了明确的国产算力选项。Kimi K3（月之暗面）已在真武超节点上跑通，<strong>非阿里系大模型公司也开始用国产自研芯片训练</strong>，这是国产算力生态的关键一步。</p>
+<h3 id="3-市场格局：两强之外添变数"><a href="#3-市场格局：两强之外添变数" class="headerlink" title="3. 市场格局：两强之外添变数"></a>3. 市场格局：两强之外添变数</h3><p>IDC口径2025年中国云端AI加速器市场：华为约49.2%、平头哥约16%。V900量产+年出货量”大幅提升”+与华为昇腾960DT同季度就绪，意味着2027年起国产算力市场将进入<strong>华为vs阿里双巨头领跑、寒武纪&#x2F;摩尔线程&#x2F;沐曦等在细分场景追赶</strong>的格局。</p>
+<h3 id="4-资本市场即时反应"><a href="#4-资本市场即时反应" class="headerlink" title="4. 资本市场即时反应"></a>4. 资本市场即时反应</h3><p>9月22日A股半导体板块高开，AI算力芯片方向领涨：旋极信息20cm涨停、瑞芯微涨停、摩尔线程+7.5%、沐曦+3%。阿里港股早盘一度涨超4%。国产算力链（服务器、液冷、高速互联、HBM存储）被带动，机构普遍把AI算力硬件列为四季度确定性最高的主线。</p>
+<h3 id="5-冷静面：发布≠替代"><a href="#5-冷静面：发布≠替代" class="headerlink" title="5. 冷静面：发布≠替代"></a>5. 冷静面：发布≠替代</h3><ul>
+<li>量产要等2027年Q1，<strong>排产时间表本身就是阿里签下的”最硬欠条”</strong>，供应链和良率是待验证环节</li>
+<li>单卡极致算力、CUDA类生态成熟度、软件适配仍与国际顶尖产品有差距</li>
+<li>国产芯片行业的上游瓶颈（EUV光刻机、EDA）并未因一颗芯片的发布而解决</li>
+</ul>
+<hr>
+<h2 id="三、阿里做芯片的战略考量"><a href="#三、阿里做芯片的战略考量" class="headerlink" title="三、阿里做芯片的战略考量"></a>三、阿里做芯片的战略考量</h2><h3 id="1-三大基石定位：芯片是”发电机”"><a href="#1-三大基石定位：芯片是”发电机”" class="headerlink" title="1. 三大基石定位：芯片是”发电机”"></a>1. 三大基石定位：芯片是”发电机”</h3><p>吴泳铭把AI模型、AI芯片、AI云定义为机器智能时代三大基石：”如果说Token是AI时代的电，芯片就是发电机。”阿里的定位不是做AI产业链的一环，而是做<strong>机器智能时代的发电站和电网</strong>。</p>
+<h3 id="2-省钱：自研芯片-阿里云的成本护城河"><a href="#2-省钱：自研芯片-阿里云的成本护城河" class="headerlink" title="2. 省钱：自研芯片&#x3D;阿里云的成本护城河"></a>2. 省钱：自研芯片&#x3D;阿里云的成本护城河</h3><p>阿里云目标是<strong>2032年全球数据中心规模超20GW</strong>（相当于2022年的10倍）。按分析师测算每GW对应约120–150亿美元收入，2032年阿里云外部收入有望破万亿。这种规模下，采购英伟达与自研的成本差会被放大到千亿级别。自研芯片+千问模型+阿里云基础设施深度协同设计（Qwen3.8-Max参与芯片协同设计可让芯片面积减少42%），是竞争对手难以复制的壁垒。</p>
+<h3 id="3-供给保障：算力紧缺时代的底气"><a href="#3-供给保障：算力紧缺时代的底气" class="headerlink" title="3. 供给保障：算力紧缺时代的底气"></a>3. 供给保障：算力紧缺时代的底气</h3><p>在全球GPU想买也未必买得到的环境里，<strong>有自研芯片能力的云计算公司&#x3D;有确定性供给的云计算公司</strong>。这是阿里押注平头哥最现实的商业逻辑。</p>
+<h3 id="4-全栈自研已完成拼图"><a href="#4-全栈自研已完成拼图" class="headerlink" title="4. 全栈自研已完成拼图"></a>4. 全栈自研已完成拼图</h3><p>平头哥现有产品线：真武（AI芯片）+倚天（服务器CPU，2027年推720&#x2F;730&#x2F;750）+ICN Switch（互联）+磐脉（智能网卡）+镇岳（SSD主控）——<strong>组建超大规模AI集群所需的核心芯片已全部自研齐</strong>。”芯片—模型—云”协同飞轮已经转起来了。</p>
+<h3 id="5-量产节奏：提前两个季度是主动信号"><a href="#5-量产节奏：提前两个季度是主动信号" class="headerlink" title="5. 量产节奏：提前两个季度是主动信号"></a>5. 量产节奏：提前两个季度是主动信号</h3><p>V900原定2027年Q3推出，提前到Q1量产。平头哥副总裁高慧：”客户等不起，我们也不能等。”约束已从设计端转移到供应链与排产端——<strong>提前量产本身就是竞争动作</strong>：抢在华为昇腾960DT就绪的同一窗口期锁客户、锁订单，同时用时间表向资本市场证明执行力。</p>
+<h3 id="6-资本市场维度的解读"><a href="#6-资本市场维度的解读" class="headerlink" title="6. 资本市场维度的解读"></a>6. 资本市场维度的解读</h3><p>阿里集中披露芯片路线图和20GW目标，也是在向资本市场重新讲故事：从”电商公司”切换到”机器智能基础设施公司”的估值逻辑。芯片出货量、数据中心GW数、云收入增速，会成为未来几年阿里估值重估的三大锚点。</p>
+<hr>
+<h2 id="四、与国内厂家的竞争产品对照"><a href="#四、与国内厂家的竞争产品对照" class="headerlink" title="四、与国内厂家的竞争产品对照"></a>四、与国内厂家的竞争产品对照</h2><table>
+<thead>
+<tr>
+<th>厂商</th>
+<th>对标产品</th>
+<th>与V900的竞争关系</th>
+<th>优势</th>
+<th>短板</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>华为昇腾</strong></td>
+<td>910C（128GB）、960DT（2027同窗口就绪）</td>
+<td><strong>最直接对手</strong>，份额约49% vs 16%</td>
+<td>全栈生态（CANN&#x2F;鲲鹏&#x2F;整机），政企渠道强</td>
+<td>先进制程受限</td>
+</tr>
+<tr>
+<td><strong>寒武纪</strong></td>
+<td>MLU590（64GB）</td>
+<td>云端训练&#x2F;推理加速卡正面竞争</td>
+<td>A股稀缺纯AI芯片标的</td>
+<td>显存规模落后，生态弱</td>
+</tr>
+<tr>
+<td><strong>摩尔线程</strong></td>
+<td>全功能GPU</td>
+<td>云端GPU+图形+AI多场景</td>
+<td>全功能GPU路线，上市后资金充裕</td>
+<td>单卡性能与生态仍在追赶</td>
+</tr>
+<tr>
+<td><strong>沐曦</strong></td>
+<td>曦云系列</td>
+<td>云端训推一体卡</td>
+<td>兼容CUDA生态迁移成本低</td>
+<td>规模与集群能力差距</td>
+</tr>
+<tr>
+<td><strong>壁仞&#x2F;燧原&#x2F;海光</strong></td>
+<td>各家智算卡</td>
+<td>云端推理与行业智算</td>
+<td>细分性价比、信创市场（海光）</td>
+<td>超大集群能力不足</td>
+</tr>
+<tr>
+<td><strong>英伟达</strong></td>
+<td>B200（192GB）、H20（96GB）</td>
+<td>降维参照系</td>
+<td>生态+制程代差</td>
+<td>对华供应受限（份额或降至8%）</td>
+</tr>
+</tbody></table>
+<p><strong>竞争本质的三个层次</strong>：</p>
+<ol>
+<li><strong>卖芯片</strong>（寒武纪、摩尔线程、沐曦们）——比单卡性价比</li>
+<li><strong>卖集群&#x2F;超节点</strong>（华为、平头哥的战场）——比系统级工程能力</li>
+<li><strong>卖”芯片+云+模型”捆绑服务</strong>（只有阿里和华为能打）——比生态闭环。阿里多一张牌：千问开源生态+阿里云企业客户；华为多一张牌：政企信创渠道</li>
+</ol>
+<hr>
+<h2 id="五、投资视角的观察点（非投资建议）"><a href="#五、投资视角的观察点（非投资建议）" class="headerlink" title="五、投资视角的观察点（非投资建议）"></a>五、投资视角的观察点（非投资建议）</h2><ol>
+<li><strong>2027Q1量产是核心验证点</strong>：兑现&#x3D;阿里叙事成立；跳票&#x3D;国产算力情绪退潮</li>
+<li><strong>关注真武芯片出货量数据</strong>：从56万片到”大幅提升”的具体幅度，决定平头哥能否实质撼动华为份额</li>
+<li><strong>国产算力链受益顺序</strong>：芯片设计（寒武纪&#x2F;摩尔线程&#x2F;沐曦）→互联与光模块→服务器&#x2F;液冷→HBM存储链</li>
+<li><strong>阿里健康度</strong>：云收入增速+资本开支节奏是跟踪”20GW承诺”的最直接指标</li>
+</ol>
+<hr>
+<p><em>信息来源：羊城晚报&#x2F;杭州日报&#x2F;证券日报&#x2F;21世纪经济报道（2026-09-23云栖大会报道）、国泰海通计算机研报（2026-09-22，显存对比口径）、网易科技（2026-09-22，量产提前与IDC份额）、人民日报英文版引Bernstein数据（2026-09-22）。本文仅为行业研究，不构成投资建议。</em></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://zhangyongming2.github.io">明哥</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://zhangyongming2.github.io/2026/09/23/2026-09-23-%E9%98%BF%E9%87%8C%E7%9C%9F%E6%AD%A6V900%E8%8A%AF%E7%89%87%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90-%E5%9B%BD%E4%BA%A7AI%E7%AE%97%E5%8A%9B%E6%A0%BC%E5%B1%80%E4%B8%8E%E7%AB%9E%E4%BA%89%E5%88%86%E6%9E%90/">https://zhangyongming2.github.io/2026/09/23/2026-09-23-%E9%98%BF%E9%87%8C%E7%9C%9F%E6%AD%A6V900%E8%8A%AF%E7%89%87%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90-%E5%9B%BD%E4%BA%A7AI%E7%AE%97%E5%8A%9B%E6%A0%BC%E5%B1%80%E4%B8%8E%E7%AB%9E%E4%BA%89%E5%88%86%E6%9E%90/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://zhangyongming2.github.io" target="_blank">科技与财经观察</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8D%8A%E5%AF%BC%E4%BD%93/">半导体</a><a class="post-meta__tags" href="/tags/AI%E8%8A%AF%E7%89%87/">AI芯片</a><a class="post-meta__tags" href="/tags/%E5%B9%B3%E5%A4%B4%E5%93%A5/">平头哥</a><a class="post-meta__tags" href="/tags/%E9%98%BF%E9%87%8C/">阿里</a><a class="post-meta__tags" href="/tags/%E5%9B%BD%E4%BA%A7%E7%AE%97%E5%8A%9B/">国产算力</a><a class="post-meta__tags" href="/tags/%E4%BA%91%E6%A0%96%E5%A4%A7%E4%BC%9A/">云栖大会</a></div><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="/" media="print" onload="this.media='all'"><script src="/" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/09/23/2026-09-23-%E7%9C%9F%E6%AD%A6V900%E5%88%B6%E9%80%A0%E9%93%BE%E6%B7%B1%E6%8C%96-%E4%B8%AD%E8%8A%AF%E4%BB%A3%E5%B7%A5%E4%B8%8E%E5%8D%8E%E4%B8%BA%E6%98%87%E8%85%BE%E5%B7%AE%E5%BC%82%E5%8F%8A%E6%A0%B8%E5%BF%83%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8/" title="真武V900制造链深挖：中芯代工、制程卡点、与华为昇腾的差异及核心上市公司"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">真武V900制造链深挖：中芯代工、制程卡点、与华为昇腾的差异及核心上市公司</div></div><div class="info-2"><div class="info-item-1">核心逻辑：真武系列（810E→M890→V900）基本都在中芯国际代工，完全处在先进制程受限的影响圈内——中芯最先进只有N+2（约7nm级、DUV多重曝光、无EUV），EDA和HBM是另两个卡点。与华为昇腾的制造端差异不在”用谁的代工厂”（两家都靠中芯），而在库存路径、产品形态、产能分配优先级。平头哥本身不上市，”真武概念股”本质是供应链+生态两条线。    一、真武系列在哪造？——中芯国际是唯一出口公开信源交叉验证的事实链：  央视新闻联播曝光：平头哥PPU（真武前身产品线）由中芯国际14nm成熟工艺制造，良率92%，月产8万片 券商&#x2F;市场多信源确认：中芯承接平头哥几乎所有核心产品的制造——倚天710服务器CPU、真武810E、玄铁系列处理器 调研纪要：阿里从2024年下半年至今累计在中芯完成约100万片晶圆流片，理论可支撑约100万张智算卡，大部分供阿里内部自用（千问、百炼），2025年出货约30万卡、2026年预计30–50万卡 中信建投：中芯目前量产的最先进节点为N+2（约7nm级）；平头哥等国产芯片的隐含约束是”5nm及以下切换国产代工需承担良率+多重图形化的...</div></div></div></a><a class="pagination-related" href="/2026/09/18/2026-09-18-%E7%A3%B7%E5%8C%96%E9%93%9FInP%E4%BA%A7%E4%B8%9A%E6%B7%B1%E5%BA%A6%E8%A7%A3%E8%AF%BB/" title="磷化铟（InP）深度解读：AI算力的「光之地基」与中国的反制牌"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">磷化铟（InP）深度解读：AI算力的「光之地基」与中国的反制牌</div></div><div class="info-2"><div class="info-item-1">磷化铟不是新东西——它是上世纪 70 年代就有的 III-V 族化合物半导体。它今天火，不是材料本身变了，而是 AI 算力把铜缆逼到了物理尽头：光互连成为唯一出路，而所有高速光模块的激光器都长在磷化铟衬底上；同时它是一种供给完全刚性的材料（原料铟是锌冶炼副产品，长晶扩产要 3–5 年，全球 90% 产能捏在三家手里），恰好中国又对其实施了出口管制。三重因素叠加，把它从专业小众材料推成了战略物资。 这篇文章回答四个问题：它在半导体里到底干什么？为什么最近这么火？中国用它反制美国到底有没有用？A 股里谁是真龙头、谁在蹭概念？    数据截止 2026-09-18（A 股行情为当日收盘，财务数据为 2026 年半年报）。关键数据均标注来源与时点；市场转述类数据（如许可拒绝率）已标注”需核实原文”。  一、先给结论 驱动本质：需求 × 供给 × 管制，三重共振。需求端 2026–2030 年磷化铟晶圆需求指引约 ×20；供给端缺口 70% 以上；管制端造成价格跳涨约 +250%。 反制有效性：有效，但是「钝刀」不是「快刀」。能抬价、延后、增加不确定性、当谈判筹码；但拦不住美国建厂，而且这...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/09/23/2026-09-23-%E7%9C%9F%E6%AD%A6V900%E5%88%B6%E9%80%A0%E9%93%BE%E6%B7%B1%E6%8C%96-%E4%B8%AD%E8%8A%AF%E4%BB%A3%E5%B7%A5%E4%B8%8E%E5%8D%8E%E4%B8%BA%E6%98%87%E8%85%BE%E5%B7%AE%E5%BC%82%E5%8F%8A%E6%A0%B8%E5%BF%83%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8/" title="真武V900制造链深挖：中芯代工、制程卡点、与华为昇腾的差异及核心上市公司"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-09-23</div><div class="info-item-2">真武V900制造链深挖：中芯代工、制程卡点、与华为昇腾的差异及核心上市公司</div></div><div class="info-2"><div class="info-item-1">核心逻辑：真武系列（810E→M890→V900）基本都在中芯国际代工，完全处在先进制程受限的影响圈内——中芯最先进只有N+2（约7nm级、DUV多重曝光、无EUV），EDA和HBM是另两个卡点。与华为昇腾的制造端差异不在”用谁的代工厂”（两家都靠中芯），而在库存路径、产品形态、产能分配优先级。平头哥本身不上市，”真武概念股”本质是供应链+生态两条线。    一、真武系列在哪造？——中芯国际是唯一出口公开信源交叉验证的事实链：  央视新闻联播曝光：平头哥PPU（真武前身产品线）由中芯国际14nm成熟工艺制造，良率92%，月产8万片 券商&#x2F;市场多信源确认：中芯承接平头哥几乎所有核心产品的制造——倚天710服务器CPU、真武810E、玄铁系列处理器 调研纪要：阿里从2024年下半年至今累计在中芯完成约100万片晶圆流片，理论可支撑约100万张智算卡，大部分供阿里内部自用（千问、百炼），2025年出货约30万卡、2026年预计30–50万卡 中信建投：中芯目前量产的最先进节点为N+2（约7nm级）；平头哥等国产芯片的隐含约束是”5nm及以下切换国产代工需承担良率+多重图形化的...</div></div></div></a><a class="pagination-related" href="/2026/04/18/%E7%8E%BB%E7%92%83%E5%9F%BA%E6%9D%BF%E4%B8%8E%E8%80%81%E5%BC%8F%E5%9F%BA%E6%9D%BF%E5%B7%AE%E5%BC%82%E5%8F%8A%E4%BA%A7%E4%B8%9A%E9%93%BE%E6%96%B0%E6%9C%BA%E4%BC%9A%E5%88%86%E6%9E%90/" title="玻璃基板与老式基板差异及产业链新机会分析"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-18</div><div class="info-item-2">玻璃基板与老式基板差异及产业链新机会分析</div></div><div class="info-2"><div class="info-item-1">一、玻璃基板 vs 老式基板：核心差异传统基板用树脂+玻璃纤维，在AI芯片时代短板尽显：    问题 老式基板 玻璃基板    受热变形 易鼓包、翘边 几乎不变形，翘边减少50%   线路数量 已达上限 提升10倍   功耗 较高 更低   厚度 较厚 更薄，适配高端AI芯片   芯片贴合 差，热胀冷缩剧烈 与硅材料贴合极佳   玻璃基板采用高端石英材料，经上千度高温熔融、精密切割等复杂工序加工，是AI芯片封装的核心骨架。 二、产业链三大核心环节① 设备环节（最上游，率先受益） 蒂尔激光：玻璃微孔激光加工设备龙头，产业扩张必先采购 华工科技：激光切割打孔，服务国内多家芯片企业 大足数控：玻璃基板加工设备全套，帮企业搭建生产线  ② 核心材料环节（最具潜力） 沃格光电：国内玻璃基板打孔加工龙头，年产能10万平米，1.6T光模块玻璃基载板已小批量送样 彩虹股份：中美”337”专利调查胜诉，自研G6玻璃基板不侵犯康宁专利，已进入北美市场 凯盛科技（央企中建材旗下）：超薄玻璃龙头，布局半导体玻璃基板，材料设备自主  ③ 关键配套环节（PSPI材料）PSPI材料是玻璃基板辅助骨架，此前全靠...</div></div></div></a><a class="pagination-related" href="/2026/07/06/2026-07-06-%E5%8D%8E%E4%B8%BA%E9%9F%AC%E5%AE%9A%E5%BE%8BV2-LogicFolding%E9%80%BB%E8%BE%91%E6%8A%98%E5%8F%A0%E4%B8%8E%E5%85%88%E8%BF%9B%E5%B0%81%E6%B5%8B%E8%AE%BE%E5%A4%87/" title="华为韬定律V2解读：LogicFolding逻辑折叠打开先进封测设备增量空间（附国产设备标的）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-07-06</div><div class="info-item-2">华为韬定律V2解读：LogicFolding逻辑折叠打开先进封测设备增量空间（附国产设备标的）</div></div><div class="info-2"><div class="info-item-1">事件背景2026年7月3日，华为海思半导体负责人何庭波于ChinaXiv预发布平台更新论文《面向多层级电子系统的时间缩微理论》V2版本，业内俗称**”韬定律V2”**，7月4日行业媒体集中对外解读。新版论文补充大量量产实测数据与LogicFolding落地路线，核心依托超细间距面对面混合键合技术实现芯片垂直堆叠升级。   一、核心技术：LogicFolding逻辑折叠量化指标与三大落地路径量化指标论文实测数据显示，在固定工艺节点下，通过逻辑折叠将电路拆分至多层有源晶圆垂直互连，新一代麒麟SoC可实现：  晶体管密度提升55% 同等性能条件下功耗降低41%  论文新增核心工程评判指标**”齿轮比”**，计算公式为：  齿轮比 &#x3D; 混合键合触点间距 &#x2F; 顶层金属走线间距   数值越趋近于1，跨层电路绕路损耗与信号时延越低 当前迭代麒麟芯片齿轮比约为2 行业长期优化目标为无限趋近1  三大落地支柱第一，互连金属材料迭代 行业主流演进路径为铝→铜→钴金属层搭配钨通孔填充，低阻新材料能够大幅降低导线寄生电容、提升芯片运行频率，直接拉动PVD、金属CVD、金属ALD薄膜沉...</div></div></div></a><a class="pagination-related" href="/2026/04/10/2026-04-10-%E6%B0%A6%E6%B0%94%E5%8D%B1%E6%9C%BA%E4%B8%8E%E4%B8%AD%E5%9B%BD%E8%8A%AF%E7%89%87%E4%BA%A7%E4%B8%9A%E7%9A%84%E7%AA%81%E5%9B%B4%E4%B9%8B%E8%B7%AF/" title="氦气危机与中国芯片产业的突围之路：从材料断供到全链自主的蜕变"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-10</div><div class="info-item-2">氦气危机与中国芯片产业的突围之路：从材料断供到全链自主的蜕变</div></div><div class="info-2"><div class="info-item-1"> 来源：行业研究文章总结 | 2026-04-10   一场气体危机，揭开了半导体产业最脆弱的底牌2025年，一张半导体工厂的停产通知震动了整个电子行业。不是因为光刻机断供，不是因为先进制程受阻，而是因为一种看不见、摸不着的气体——氦气。 这听起来有些荒谬。一家投资数百亿美元的芯片工厂，理论上可以设计出全球最精密的晶体管，却可能因为氦气供应中断而被迫停工。这不是科幻，而是正在发生的产业现实。 氦气在半导体制造中的角色，远比我们想象的重要。EUV光刻机的超低温冷却、晶圆高温工艺的精准温控、芯片制造的洁净环境、封装环节的气密性检测——几乎每一个先进制程的核心环节，都离不开氦气的参与。更关键的是，在7nm及以下的制程节点上，目前没有任何气体能够完全替代氦气。 这才是真正的”卡脖子”所在。  全球氦气供应：一场地缘政治驱动的资源危机氦气是不可再生的稀缺资源，这一点本身就足够令人警觉。更棘手的是，全球氦气资源的地理分布极度集中——美国、卡塔尔、阿尔及利亚、俄罗斯四国占据了绝大部分产能。其中，卡塔尔一国就贡献了全球近四成的氦气产量。 这种集中度，在地缘和平时期只是商业风险；但一旦地缘冲突爆发...</div></div></div></a><a class="pagination-related" href="/2026/06/11/2026-06-11-%E5%85%AD%E6%B0%9F%E4%B8%81%E4%BA%8C%E7%83%AF%E5%8D%8A%E5%AF%BC%E4%BD%93%E9%BB%84%E9%87%91%E8%B5%9B%E9%81%93%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/" title="六氟丁二烯：半导体黄金赛道深度解析"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-06-11</div><div class="info-item-2">六氟丁二烯：半导体黄金赛道深度解析</div></div><div class="info-2"><div class="info-item-1">一句话总结**六氟丁二烯（C₄F₆）**是半导体先进制程的”黄金手术刀”，中国已从完全依赖进口做到全球市占率70%+，昊华科技一家独占56%。    第一章：六氟丁二烯是什么？基本性质 化学式 C₄F₆，常温下无色、剧毒、易燃气体 分子含两个交替碳碳双键（共轭体系），在等离子体下产生恰到好处的氟自由基 既能”精准切割”，又能”自动保护”不需要切割的部分  三大核心优势   指标 六氟丁二烯 传统气体（如C₄F₈）    刻蚀深宽比 120:1以上，侧壁垂直度&gt;89.5° 50:1就力不从心   氮化硅选择比 25-35:1 约5-10:1   GWP（全球变暖潜能值） 290 数千~上万   大气寿命 1.9天 数千年   三大应用场景 3D NAND闪存（占52%）：300层产线用量是128层的8-10倍 先进逻辑芯片（占35%）：台积电3nm用量是7nm的3倍 DRAM存储器（占8%）：电容结构和金属互连层刻蚀   第二章：全球市场格局市场规模 2025年：6.26亿美元（约45亿人民币） 2032年预计：18.36亿美元（约130亿人民币） CAGR 16.9%，远超...</div></div></div></a><a class="pagination-related" href="/2026/08/22/2026-08-22-%E9%95%BF%E9%91%AB%E7%A7%91%E6%8A%80%E4%B8%8A%E5%B8%82%E7%88%86%E7%BA%A2%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%90%88%E8%82%A5%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%88%E6%9E%81%E8%83%9C%E5%88%A9/" title="长鑫科技上市爆红：如何看待「合肥模式」的终极胜利"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-08-22</div><div class="info-item-2">长鑫科技上市爆红：如何看待「合肥模式」的终极胜利</div></div><div class="info-2"><div class="info-item-1"> 来源：行业研究文章整理 | 2026-08-22   一、事件核心背景长鑫科技作为国内一体化 DRAM（动态随机存取存储器） 制造龙头，2016 年成立，2026 年 7 月 27 日登陆科创板，上市首日大涨 465.82%，登顶 A 股市值首位，后续总市值一度突破 4.13 万亿元，成为 A 股首家 4 万亿级科技企业，也让合肥模式再度成为全网热议的产业标杆。 项目核心底色：全程由合肥国资托底赋能。 2016 年长鑫一期 180 亿投资中，合肥产投出资 144 亿、占比 80%。企业成立十年累计亏损超 366 亿元，市场化资本长期观望、不敢入局，唯有合肥国资持续注资、从未撤资，成为企业穿越行业低谷、实现技术突破的核心支撑。上市后合肥国资合计持股约 33%，账面回报超万亿。  二、核心结论：长鑫爆火，是合肥模式的完整验证市场将本次事件定义为合肥模式的标志性胜利，核心原因是长鑫项目完整落地了这套地方产业培育体系的所有核心逻辑，彻底区别于传统城市招商模式。 1. 模式升级：从”政策补贴”变为”国资长期合伙人”传统地方招商依赖土地、税费减免，企业粘性极低，政策到期极易产业外流，属于”...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">明哥</div><div class="author-info-description">关注人工智能带来的新质生产力变化</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">73</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">267</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">35</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zhangyongming2"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%9C%9F%E6%AD%A6V900%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9A%E6%A0%B8%E5%BF%83%E5%8F%82%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">一、真武V900是什么：核心参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E5%AD%98%E6%A8%AA%E5%90%91%E5%AF%B9%E6%AF%94%EF%BC%88%E5%9B%BD%E6%B3%B0%E6%B5%B7%E9%80%9A%E7%A0%94%E6%8A%A5%E5%8F%A3%E5%BE%84%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">显存横向对比（国泰海通研报口径）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AF%B9%E5%9B%BD%E5%86%85%E8%8A%AF%E7%89%87%E8%A1%8C%E4%B8%9A%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-number">2.</span> <span class="toc-text">二、对国内芯片行业的影响</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AB%9E%E4%BA%89%E5%9D%90%E6%A0%87%E7%B3%BB%E6%94%B9%E5%8F%98%EF%BC%9A%E4%BB%8E%E2%80%9D%E5%8D%95%E5%8D%A1%E5%AF%B9%E6%A0%87%E2%80%9D%E8%BD%AC%E5%90%91%E2%80%9D%E7%B3%BB%E7%BB%9F%E7%BA%A7%E7%AB%9E%E4%BA%89%E2%80%9D"><span class="toc-number">2.1.</span> <span class="toc-text">1. 竞争坐标系改变：从”单卡对标”转向”系统级竞争”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9B%BD%E4%BA%A7%E7%AE%97%E5%8A%9B%E2%80%9D%E4%BE%9B%E7%BB%99%E7%A1%AE%E5%AE%9A%E6%80%A7%E2%80%9D%E6%8F%90%E5%8D%87%EF%BC%8C%E7%BC%93%E8%A7%A3%E5%8D%A1%E8%84%96%E5%AD%90%E7%84%A6%E8%99%91"><span class="toc-number">2.2.</span> <span class="toc-text">2. 国产算力”供给确定性”提升，缓解卡脖子焦虑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%B8%82%E5%9C%BA%E6%A0%BC%E5%B1%80%EF%BC%9A%E4%B8%A4%E5%BC%BA%E4%B9%8B%E5%A4%96%E6%B7%BB%E5%8F%98%E6%95%B0"><span class="toc-number">2.3.</span> <span class="toc-text">3. 市场格局：两强之外添变数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%B5%84%E6%9C%AC%E5%B8%82%E5%9C%BA%E5%8D%B3%E6%97%B6%E5%8F%8D%E5%BA%94"><span class="toc-number">2.4.</span> <span class="toc-text">4. 资本市场即时反应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%86%B7%E9%9D%99%E9%9D%A2%EF%BC%9A%E5%8F%91%E5%B8%83%E2%89%A0%E6%9B%BF%E4%BB%A3"><span class="toc-number">2.5.</span> <span class="toc-text">5. 冷静面：发布≠替代</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%98%BF%E9%87%8C%E5%81%9A%E8%8A%AF%E7%89%87%E7%9A%84%E6%88%98%E7%95%A5%E8%80%83%E9%87%8F"><span class="toc-number">3.</span> <span class="toc-text">三、阿里做芯片的战略考量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%89%E5%A4%A7%E5%9F%BA%E7%9F%B3%E5%AE%9A%E4%BD%8D%EF%BC%9A%E8%8A%AF%E7%89%87%E6%98%AF%E2%80%9D%E5%8F%91%E7%94%B5%E6%9C%BA%E2%80%9D"><span class="toc-number">3.1.</span> <span class="toc-text">1. 三大基石定位：芯片是”发电机”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%9C%81%E9%92%B1%EF%BC%9A%E8%87%AA%E7%A0%94%E8%8A%AF%E7%89%87-%E9%98%BF%E9%87%8C%E4%BA%91%E7%9A%84%E6%88%90%E6%9C%AC%E6%8A%A4%E5%9F%8E%E6%B2%B3"><span class="toc-number">3.2.</span> <span class="toc-text">2. 省钱：自研芯片&#x3D;阿里云的成本护城河</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BE%9B%E7%BB%99%E4%BF%9D%E9%9A%9C%EF%BC%9A%E7%AE%97%E5%8A%9B%E7%B4%A7%E7%BC%BA%E6%97%B6%E4%BB%A3%E7%9A%84%E5%BA%95%E6%B0%94"><span class="toc-number">3.3.</span> <span class="toc-text">3. 供给保障：算力紧缺时代的底气</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%85%A8%E6%A0%88%E8%87%AA%E7%A0%94%E5%B7%B2%E5%AE%8C%E6%88%90%E6%8B%BC%E5%9B%BE"><span class="toc-number">3.4.</span> <span class="toc-text">4. 全栈自研已完成拼图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E9%87%8F%E4%BA%A7%E8%8A%82%E5%A5%8F%EF%BC%9A%E6%8F%90%E5%89%8D%E4%B8%A4%E4%B8%AA%E5%AD%A3%E5%BA%A6%E6%98%AF%E4%B8%BB%E5%8A%A8%E4%BF%A1%E5%8F%B7"><span class="toc-number">3.5.</span> <span class="toc-text">5. 量产节奏：提前两个季度是主动信号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E8%B5%84%E6%9C%AC%E5%B8%82%E5%9C%BA%E7%BB%B4%E5%BA%A6%E7%9A%84%E8%A7%A3%E8%AF%BB"><span class="toc-number">3.6.</span> <span class="toc-text">6. 资本市场维度的解读</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%B8%8E%E5%9B%BD%E5%86%85%E5%8E%82%E5%AE%B6%E7%9A%84%E7%AB%9E%E4%BA%89%E4%BA%A7%E5%93%81%E5%AF%B9%E7%85%A7"><span class="toc-number">4.</span> <span class="toc-text">四、与国内厂家的竞争产品对照</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%8A%95%E8%B5%84%E8%A7%86%E8%A7%92%E7%9A%84%E8%A7%82%E5%AF%9F%E7%82%B9%EF%BC%88%E9%9D%9E%E6%8A%95%E8%B5%84%E5%BB%BA%E8%AE%AE%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">五、投资视角的观察点（非投资建议）</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/23/2026-09-23-%E7%9C%9F%E6%AD%A6V900%E5%88%B6%E9%80%A0%E9%93%BE%E6%B7%B1%E6%8C%96-%E4%B8%AD%E8%8A%AF%E4%BB%A3%E5%B7%A5%E4%B8%8E%E5%8D%8E%E4%B8%BA%E6%98%87%E8%85%BE%E5%B7%AE%E5%BC%82%E5%8F%8A%E6%A0%B8%E5%BF%83%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8/" title="真武V900制造链深挖：中芯代工、制程卡点、与华为昇腾的差异及核心上市公司">真武V900制造链深挖：中芯代工、制程卡点、与华为昇腾的差异及核心上市公司</a><time datetime="2026-09-23T00:06:00.000Z" title="发表于 2026-09-23 08:06:00">2026-09-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/23/2026-09-23-%E9%98%BF%E9%87%8C%E7%9C%9F%E6%AD%A6V900%E8%8A%AF%E7%89%87%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90-%E5%9B%BD%E4%BA%A7AI%E7%AE%97%E5%8A%9B%E6%A0%BC%E5%B1%80%E4%B8%8E%E7%AB%9E%E4%BA%89%E5%88%86%E6%9E%90/" title="阿里真武V900芯片深度解析：国产AI算力格局与竞争分析">阿里真武V900芯片深度解析：国产AI算力格局与竞争分析</a><time datetime="2026-09-23T00:05:00.000Z" title="发表于 2026-09-23 08:05:00">2026-09-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/18/2026-09-18-%E7%A3%B7%E5%8C%96%E9%93%9FInP%E4%BA%A7%E4%B8%9A%E6%B7%B1%E5%BA%A6%E8%A7%A3%E8%AF%BB/" title="磷化铟（InP）深度解读：AI算力的「光之地基」与中国的反制牌">磷化铟（InP）深度解读：AI算力的「光之地基」与中国的反制牌</a><time datetime="2026-09-18T10:30:00.000Z" title="发表于 2026-09-18 18:30:00">2026-09-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/11/2026-09-11-%E9%BA%BB%E5%9F%8E%E7%9F%B3%E6%9D%90%E7%9F%BF%E5%8C%BA%E9%81%93%E8%B7%AF%E8%B8%8F%E5%8B%98-%E8%BF%90%E5%8A%A8%E8%BD%A8%E8%BF%B9%E4%B8%8E%E5%BE%AA%E8%BF%B9%E5%AF%BC%E8%88%AA%E6%96%B9%E6%B3%95/" title="麻城石材矿区道路踏勘：用运动轨迹+循迹导航摸清山间路网">麻城石材矿区道路踏勘：用运动轨迹+循迹导航摸清山间路网</a><time datetime="2026-09-11T10:00:00.000Z" title="发表于 2026-09-11 18:00:00">2026-09-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/02/2026-09-02-%E5%85%89%E4%BC%8F%E8%A1%8C%E4%B8%9A%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A/" title="光伏行业深度研究报告：从产业链末端看出清与技术迭代">光伏行业深度研究报告：从产业链末端看出清与技术迭代</a><time datetime="2026-09-02T08:30:00.000Z" title="发表于 2026-09-02 16:30:00">2026-09-02</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 明哥</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,680 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>磷化铟（InP）深度解读：AI算力的「光之地基」与中国的反制牌 | 科技与财经观察</title><meta name="author" content="明哥"><meta name="copyright" content="明哥"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="磷化铟不是新东西——它是上世纪 70 年代就有的 III-V 族化合物半导体。它今天火，不是材料本身变了，而是 AI 算力把铜缆逼到了物理尽头：光互连成为唯一出路，而所有高速光模块的激光器都长在磷化铟衬底上；同时它是一种供给完全刚性的材料（原料铟是锌冶炼副产品，长晶扩产要 3–5 年，全球 90% 产能捏在三家手里），恰好中国又对其实施了出口管制。三重因素叠加，把它从专业小众材料推成了战略物资。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="磷化铟（InP）深度解读：AI算力的「光之地基」与中国的反制牌">
+<meta property="og:url" content="https://zhangyongming2.github.io/2026/09/18/2026-09-18-%E7%A3%B7%E5%8C%96%E9%93%9FInP%E4%BA%A7%E4%B8%9A%E6%B7%B1%E5%BA%A6%E8%A7%A3%E8%AF%BB/index.html">
+<meta property="og:site_name" content="科技与财经观察">
+<meta property="og:description" content="磷化铟不是新东西——它是上世纪 70 年代就有的 III-V 族化合物半导体。它今天火，不是材料本身变了，而是 AI 算力把铜缆逼到了物理尽头：光互连成为唯一出路，而所有高速光模块的激光器都长在磷化铟衬底上；同时它是一种供给完全刚性的材料（原料铟是锌冶炼副产品，长晶扩产要 3–5 年，全球 90% 产能捏在三家手里），恰好中国又对其实施了出口管制。三重因素叠加，把它从专业小众材料推成了战略物资。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zhangyongming2.github.io/img/butterfly-icon.png">
+<meta property="article:published_time" content="2026-09-18T10:30:00.000Z">
+<meta property="article:modified_time" content="2026-09-18T10:26:08.961Z">
+<meta property="article:author" content="明哥">
+<meta property="article:tag" content="AI算力">
+<meta property="article:tag" content="A股">
+<meta property="article:tag" content="光模块">
+<meta property="article:tag" content="出口管制">
+<meta property="article:tag" content="化合物半导体">
+<meta property="article:tag" content="磷化铟">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zhangyongming2.github.io/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "磷化铟（InP）深度解读：AI算力的「光之地基」与中国的反制牌",
+  "url": "https://zhangyongming2.github.io/2026/09/18/2026-09-18-%E7%A3%B7%E5%8C%96%E9%93%9FInP%E4%BA%A7%E4%B8%9A%E6%B7%B1%E5%BA%A6%E8%A7%A3%E8%AF%BB/",
+  "image": "https://zhangyongming2.github.io/img/butterfly-icon.png",
+  "datePublished": "2026-09-18T10:30:00.000Z",
+  "dateModified": "2026-09-18T10:26:08.961Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "明哥",
+      "url": "https://zhangyongming2.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zhangyongming2.github.io/2026/09/18/2026-09-18-%E7%A3%B7%E5%8C%96%E9%93%9FInP%E4%BA%A7%E4%B8%9A%E6%B7%B1%E5%BA%A6%E8%A7%A3%E8%AF%BB/index.html"><link rel="preconnect"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="/"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '磷化铟（InP）深度解读：AI算力的「光之地基」与中国的反制牌',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">科技与财经观察</span></a><a class="nav-page-title" href="/"><span class="site-name">磷化铟（InP）深度解读：AI算力的「光之地基」与中国的反制牌</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">磷化铟（InP）深度解读：AI算力的「光之地基」与中国的反制牌</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-09-18T10:30:00.000Z" title="发表于 2026-09-18 18:30:00">2026-09-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-09-18T10:26:08.961Z" title="更新于 2026-09-18 18:26:08">2026-09-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BA%A7%E4%B8%9A%E7%A0%94%E7%A9%B6/">产业研究</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>磷化铟不是新东西——它是上世纪 70 年代就有的 III-V 族化合物半导体。它今天火，不是材料本身变了，而是 <strong>AI 算力把铜缆逼到了物理尽头</strong>：光互连成为唯一出路，而所有高速光模块的激光器都长在磷化铟衬底上；同时它是一种供给完全刚性的材料（原料铟是锌冶炼副产品，长晶扩产要 3–5 年，全球 90% 产能捏在三家手里），恰好中国又对其实施了出口管制。三重因素叠加，把它从专业小众材料推成了战略物资。</p>
+<p>这篇文章回答四个问题：它在半导体里到底干什么？为什么最近这么火？中国用它反制美国到底有没有用？A 股里谁是真龙头、谁在蹭概念？</p>
+<span id="more"></span>
+
+<blockquote>
+<p>数据截止 2026-09-18（A 股行情为当日收盘，财务数据为 2026 年半年报）。关键数据均标注来源与时点；市场转述类数据（如许可拒绝率）已标注”需核实原文”。</p>
+</blockquote>
+<h2 id="一、先给结论"><a href="#一、先给结论" class="headerlink" title="一、先给结论"></a>一、先给结论</h2><ol>
+<li><strong>驱动本质</strong>：需求 × 供给 × 管制，三重共振。需求端 2026–2030 年磷化铟晶圆需求指引约 ×20；供给端缺口 70% 以上；管制端造成价格跳涨约 +250%。</li>
+<li><strong>反制有效性</strong>：有效，但是「钝刀」不是「快刀」。能抬价、延后、增加不确定性、当谈判筹码；但拦不住美国建厂，而且这张牌会随时间贬值。</li>
+<li><strong>A 股真龙头</strong>：衬底看<strong>云南锗业（002428）</strong>，光芯片看<strong>源杰科技（688498）</strong>。其余多数是布局者，甚至有已公告”暂无相关产品”却仍被热炒的概念标的。</li>
+</ol>
+<p>三个容易被忽略的关键事实：</p>
+<ul>
+<li>中国在磷化铟产业链<strong>上游</strong>掌握全球约 70% 精铟产量，但<strong>衬底成品全球份额仅约一成</strong>——资源强、制造弱。</li>
+<li>中国的软肋同样致命：800G&#x2F;1.6T 光模块的 <strong>DSP 国产化率不足 5%</strong>、<strong>200G EML 进口率超 90%</strong>。真打成互相禁运，3–5 年内中国更痛。</li>
+<li>市场热炒的标的中，<strong>有研新材（600206）已于 2026 年 6 月 30 日、7 月 1 日两次公告、8 月 14 日互动平台再次明确”暂无磷化铟相关产品和技术”</strong>，却仍在概念板块里年内上涨约 155%。「概念真伪差」是本轮最大的陷阱。</li>
+</ul>
+<h2 id="二、这个材料在半导体里到底干什么"><a href="#二、这个材料在半导体里到底干什么" class="headerlink" title="二、这个材料在半导体里到底干什么"></a>二、这个材料在半导体里到底干什么</h2><h3 id="1-一句话定位：它是「发光器件」的地基"><a href="#1-一句话定位：它是「发光器件」的地基" class="headerlink" title="1. 一句话定位：它是「发光器件」的地基"></a>1. 一句话定位：它是「发光器件」的地基</h3><p>半导体材料按能不能发光分成两个世界。<strong>硅不能发光</strong>——它是间接带隙材料，电子跃迁时能量主要变成热而不是光，所以几十年来硅能做计算、能做波导、能做调制器，唯独做不了激光器。而<strong>磷化铟是直接带隙材料</strong>，电子跃迁直接放出光子，效率极高，是制造激光器的天然材料。</p>
+<p>再叠加两个禀赋：它的发光波长正好落在 <strong>1310nm &#x2F; 1550nm</strong>——石英光纤损耗最低、色散最小的窗口；它的电子迁移率和饱和漂移速度远高于硅，能跑到 100Gbps&#x2F;通道以上。<strong>能发光、波长对、跑得快</strong>，这三个特性决定了它在高速光通信里几乎没有替代者。</p>
+<h3 id="2-它具体造出哪些器件"><a href="#2-它具体造出哪些器件" class="headerlink" title="2. 它具体造出哪些器件"></a>2. 它具体造出哪些器件</h3><table>
+<thead>
+<tr>
+<th>器件</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>EML 电吸收调制激光器</td>
+<td>800G&#x2F;1.6T 光模块发射端核心，价值量最高</td>
+</tr>
+<tr>
+<td>CW 连续波激光器</td>
+<td>硅光、CPO 架构的「外置光源」</td>
+</tr>
+<tr>
+<td>DFB 分布反馈激光器</td>
+<td>中短距光模块</td>
+</tr>
+<tr>
+<td>PIN &#x2F; APD 光电探测器</td>
+<td>接收端，把光还原成电</td>
+</tr>
+<tr>
+<td>HBT &#x2F; HEMT 高频器件</td>
+<td>5G&#x2F;6G 射频前端、相控阵雷达、卫星通信（军民两用属性来源）</td>
+</tr>
+<tr>
+<td>1550nm 光源</td>
+<td>激光雷达（人眼安全窗口）、自动驾驶</td>
+</tr>
+</tbody></table>
+<p>在产业链里的物理位置：<strong>衬底（Substrate）</strong>——承载所有功能层生长的「地基」。工艺链为：多晶合成 → 单晶生长 → 切磨抛成衬底 → MOCVD 外延 → 光芯片 → 光模块。主流量产尺寸 2–4 英寸，6 英寸是当前最高商用尺寸（远小于硅的 12 英寸）。需求结构上约 80% 以上来自光电应用。</p>
+<h3 id="3-为什么「硅光」和「CPO」也绕不开它"><a href="#3-为什么「硅光」和「CPO」也绕不开它" class="headerlink" title="3. 为什么「硅光」和「CPO」也绕不开它"></a>3. 为什么「硅光」和「CPO」也绕不开它</h3><p>这是最多人误解的一点。硅光芯片可以用硅做波导、做调制器、做复用器，<strong>但光源必须外挂</strong>——因为硅不发光。硅光方案里那颗提供稳定光源的连续波（CW）激光器，仍然必须长在磷化铟衬底上。CPO（共封装光学）把激光器移出封装做成独立外置光源（ELS），核心器件依然是磷化铟基 CW 激光器。</p>
+<p>**无论技术路线怎么演——可插拔 → LPO → NPO → CPO，磷化铟激光器是所有方案的最大公约数。**这就是”不可替代”四个字站得住的物理原因。</p>
+<h3 id="4-铜缆的物理尽头"><a href="#4-铜缆的物理尽头" class="headerlink" title="4. 铜缆的物理尽头"></a>4. 铜缆的物理尽头</h3><p>AI 训练的本质是几万张 GPU 协同计算，每张卡的中间结果要在微秒级同步给集群里所有其他卡，这一步走的是互连。而铜缆在高速率下的衰减、串扰、功耗三重困境无法回避：</p>
+<ul>
+<li>400Gbps 下无源铜缆（DAC）有效距离只剩数米；</li>
+<li>112Gbps PAM4（800G 单通道速率）压到 <strong>1 米以内</strong>；</li>
+<li>224Gbps（1.6T 时代）几乎只能在封装内部走线。</li>
+</ul>
+<p>当 Scale-Up 从单一机柜扩展到跨机柜（如 576 GPU 集群），铜缆已无法胜任。这就是英伟达 2026 年 3 月 GTC 上那句「GPU 的速度取决于为其供网的速度」——并随即向 Lumentum、Coherent 各投 20 亿美元锁定光芯片产能。</p>
+<h3 id="5-用量与尺寸的经济学"><a href="#5-用量与尺寸的经济学" class="headerlink" title="5. 用量与尺寸的经济学"></a>5. 用量与尺寸的经济学</h3><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数据</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单模块激光器颗数</td>
+<td>800G 需 4–8 颗；1.6T 翻倍至 8–16 颗</td>
+<td>速率升级 &#x3D; 衬底需求非线性增长</td>
+</tr>
+<tr>
+<td>衬底面积需求</td>
+<td>1.6T 约为 800G 的 2.7–3 倍</td>
+<td>不是翻倍，是接近三倍</td>
+</tr>
+<tr>
+<td>晶圆尺寸红利</td>
+<td>6 英寸可用面积约为 3 英寸的 4 倍</td>
+<td>单片切出更多芯片，成本可降 60–70%</td>
+</tr>
+<tr>
+<td>英伟达需求指引</td>
+<td>2026–2030 年需求激增约 ×20</td>
+<td>GTC 2026 供应链指引</td>
+</tr>
+<tr>
+<td>CPO 渗透率</td>
+<td>2026 年约 0.5% → 2030 年约 35%</td>
+<td>TrendForce 预测，CPO 反而更依赖磷化铟光源</td>
+</tr>
+</tbody></table>
+<p>（来源：英伟达 GTC 2026 供应链指引、TrendForce、Omdia&#x2F;Yole，均经媒体转述，属非一手来源，需核实原文。）</p>
+<h2 id="三、为什么最近这么火：三重共振"><a href="#三、为什么最近这么火：三重共振" class="headerlink" title="三、为什么最近这么火：三重共振"></a>三、为什么最近这么火：三重共振</h2><h3 id="1-需求端：AI-集群把光互连变成刚需"><a href="#1-需求端：AI-集群把光互连变成刚需" class="headerlink" title="1. 需求端：AI 集群把光互连变成刚需"></a>1. 需求端：AI 集群把光互连变成刚需</h3><p>AI 集群从「万卡」向「十万卡」扩展，互连拓扑从机柜内走线变成跨机柜光互连，光模块用量与速率同时抬升，而且速率升级带来的衬底需求增长是指数级的。同时 CPO 把光连接推进到 AI 加速器与内存之间，需要光连接的数据路径还在增加。</p>
+<h3 id="2-供给端：从矿到料的全链条刚性"><a href="#2-供给端：从矿到料的全链条刚性" class="headerlink" title="2. 供给端：从矿到料的全链条刚性"></a>2. 供给端：从矿到料的全链条刚性</h3><ul>
+<li><strong>原料铟</strong>：约 90% 原生铟来自锌冶炼副产品，无法为了铟多炼锌，供给弹性天生极低；2025 年全球铟产量约 1100 吨，同比仅 +0.92%；半导体级需 7N（99.99999%）纯度，全球能稳定量产的企业不超过约五家。</li>
+<li><strong>衬底</strong>：日本住友电工约 42%、美国 AXT&#x2F;北京通美约 35%、日本 JX 金属约 13%，三家合计 90%+；扩产周期 3–5 年（建线 18–36 个月 + 良率爬坡 8–12 个月 + 客户认证 12–24 个月）；MOCVD 设备被德国 Aixtron、美国 Veeco 双寡头垄断，交期 6–12 个月。</li>
+<li><strong>外延</strong>：决定器件光电性能，毛利率约 40–55%；高端电子束光刻（EBL）交期超 12 个月。</li>
+<li><strong>光芯片</strong>：EML&#x2F;CW&#x2F;DFB&#x2F;探测器，价值量最高；200G EML 目前全球仅极少数厂商能量产。</li>
+<li><strong>光模块</strong>：毛利率最低（25–30%），上游涨价难以完全向下传导；英伟达已锁定 Coherent&#x2F;Lumentum，CW 产能排期到 2028 年。</li>
+</ul>
+<h3 id="3-供需缺口：70-以上的硬缺口"><a href="#3-供需缺口：70-以上的硬缺口" class="headerlink" title="3. 供需缺口：70% 以上的硬缺口"></a>3. 供需缺口：70% 以上的硬缺口</h3><table>
+<thead>
+<tr>
+<th>年份</th>
+<th>需求（2英寸当量，万片）</th>
+<th>有效合规产能（万片）</th>
+<th>缺口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2025（实际）</td>
+<td>约 205</td>
+<td>约 65</td>
+<td>~68%</td>
+</tr>
+<tr>
+<td>2026（预测）</td>
+<td>约 280</td>
+<td>约 75</td>
+<td>~73%</td>
+</tr>
+<tr>
+<td>2027（预测）</td>
+<td>400+</td>
+<td>约 95</td>
+<td>~76%</td>
+</tr>
+</tbody></table>
+<p>（来源：Omdia、Yole 等机构 2026 年预测，经行业材料转述，需核实原文；「有效合规产能」指已通过头部客户认证的产能，口径严于总产能。）</p>
+<h3 id="4-价格：管制落地后的跳涨"><a href="#4-价格：管制落地后的跳涨" class="headerlink" title="4. 价格：管制落地后的跳涨"></a>4. 价格：管制落地后的跳涨</h3><table>
+<thead>
+<tr>
+<th>规格</th>
+<th>管制前常态价</th>
+<th>2026 年 8 月市场价</th>
+<th>涨幅</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2 英寸衬底</td>
+<td>约 800 美元&#x2F;片</td>
+<td>约 2300–2500 美元&#x2F;片</td>
+<td>~+200%</td>
+</tr>
+<tr>
+<td>6 英寸衬底</td>
+<td>约 1400 美元&#x2F;片</td>
+<td>约 5000 美元&#x2F;片</td>
+<td>~+250%</td>
+</tr>
+</tbody></table>
+<p>（来源：Tech Times 2026-08-05、行业报价转述；6 英寸射频级国内报价已达约 1.8 万元&#x2F;片。非一手来源，需核实原文。）</p>
+<h3 id="5-管制与资本时间线"><a href="#5-管制与资本时间线" class="headerlink" title="5. 管制与资本时间线"></a>5. 管制与资本时间线</h3><table>
+<thead>
+<tr>
+<th>时间</th>
+<th>事件</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2023 年</td>
+<td>镓、锗出口管制</td>
+<td>先行试水，确立「关键矿产」工具箱</td>
+</tr>
+<tr>
+<td>2025-02-04</td>
+<td>商务部、海关总署第 10 号公告</td>
+<td>磷化铟、三甲基铟、三乙基铟及配套生产技术纳入两用物项出口管制</td>
+</tr>
+<tr>
+<td>2026-01-06</td>
+<td>2026 年第 1 号公告</td>
+<td>禁止所有两用物项对日本军事用户&#x2F;军事用途出口，覆盖千余项税号，含域外效力条款</td>
+</tr>
+<tr>
+<td>2026-02-24</td>
+<td>第 11、12 号公告</td>
+<td>20 家日本实体列入管控名单、20 家列入关注名单</td>
+</tr>
+<tr>
+<td>2026 年</td>
+<td>铟出口配额收紧</td>
+<td>年度出口总量限年产量的 30% 以内，≥6N 高纯铟特批更严</td>
+</tr>
+<tr>
+<td>2026-03</td>
+<td>英伟达产业资本</td>
+<td>向 Coherent、Lumentum 各投 20 亿美元锁定产能</td>
+</tr>
+<tr>
+<td>2026-05</td>
+<td>首批出口许可放行</td>
+<td>主要涉及 AXT 旗下北京通美，5 月底开始出货</td>
+</tr>
+<tr>
+<td>2026-06</td>
+<td>黄仁勋出席奠基</td>
+<td>Coherent 得州 Sherman 全球首座 6 英寸磷化铟量产厂扩建</td>
+</tr>
+<tr>
+<td>2026-07</td>
+<td>日本激进扩产</td>
+<td>JX 金属 4 年最高投 1200 亿日元（产能 ×7–10）；住友追加 180 亿日元</td>
+</tr>
+<tr>
+<td>2026-08-04</td>
+<td>FCC 拟禁中国光模块</td>
+<td>美股光通信大涨、中际旭创一度跌 14%；中金判断「中长期大概率雷声大雨点小」</td>
+</tr>
+</tbody></table>
+<h2 id="四、中国用磷化铟反制美国，真能起作用吗"><a href="#四、中国用磷化铟反制美国，真能起作用吗" class="headerlink" title="四、中国用磷化铟反制美国，真能起作用吗"></a>四、中国用磷化铟反制美国，真能起作用吗</h2><p>市场叙事通常是「手握七成铟资源，美国 AI 直接瘫痪」——这个说法既不准确，也会误导判断。</p>
+<h3 id="1-传导链"><a href="#1-传导链" class="headerlink" title="1. 传导链"></a>1. 传导链</h3><p>管制衬底成品（海外光芯片厂断 6 英寸货源）→ 收紧高纯铟原料（日本长晶厂原生铟约九成依赖中国，回收废料量小）→ 全球供给紧张、价格暴涨、海外扩产停滞 → 牵制美国 AI 数据中心交付节奏。</p>
+<h3 id="2-已经发生的杀伤力：四个硬证据"><a href="#2-已经发生的杀伤力：四个硬证据" class="headerlink" title="2. 已经发生的杀伤力：四个硬证据"></a>2. 已经发生的杀伤力：四个硬证据</h3><table>
+<thead>
+<tr>
+<th>证据</th>
+<th>具体事实</th>
+<th>时点&#x2F;来源</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>价格跳涨</td>
+<td>6 英寸晶圆 1400 → 约 5000 美元，+250%</td>
+<td>Tech Times 2026-08-05</td>
+</tr>
+<tr>
+<td>美企订单积压</td>
+<td>AXT 2026Q1 积压订单超 6000 万美元；2025Q4 因许可不足下调收入预期；2025 年 6 月才拿到首批许可（约 4 个月空窗）</td>
+<td>AXT 监管文件</td>
+</tr>
+<tr>
+<td>对手 CEO 亲自来谈</td>
+<td>Coherent CEO 2026 年 5 月随美商务代表团访华，专门交涉 InP 许可延迟</td>
+<td>Tech Times</td>
+</tr>
+<tr>
+<td>下游公开预警</td>
+<td>Lumentum CEO：InP 短缺比内存更严重；EML 出货仍比需求低 25–30%</td>
+<td>RAISE Summit</td>
+</tr>
+</tbody></table>
+<p>（另有市场反馈称日美企业申请中国产衬底拒绝率超 80%、对日民用铟许可通过率不足 20%——来自市场反馈与自媒体统计，非官方口径，需核实原文。）</p>
+<h3 id="3-四道压力测试"><a href="#3-四道压力测试" class="headerlink" title="3. 四道压力测试"></a>3. 四道压力测试</h3><p><strong>测试一：管制是「许可制」，不是「禁运」——牌是选择性出的。</strong><br>2026 年 5 月底中国已放行首批磷化铟衬底出口许可（主要涉及北京通美）；云南锗业 2026 年 3 月已取得常态化出口许可资质。中国龙头厂商本身就在出口——管制是「有选择的卡」而非「全面断供」：拉长审批、削减配额、抬高合规成本、增加不确定性。这符合理性博弈逻辑：全面断供会立即触发最强反制，选择性管制可以长期施压、随时调节、保留谈判空间。</p>
+<p><strong>测试二：中国的软肋同样致命——这是一场互相掐脖子。</strong><br>800G&#x2F;1.6T 模块的 DSP 国产化率不足 5%（博通&#x2F;Marvell 双寡头垄断）；25G 以上高速光芯片国产化率仅约 4–5%；200G EML 进口率超 90%（中际旭创年报自述主要依赖进口，供应商为 Lumentum、住友、三菱、博通）；6 英寸高端衬底国产化率不足 5–10%，良率与国际龙头差 15–20 个百分点。若升级为「美国禁 DSP&#x2F;EML ↔ 中国禁 InP」的对等交换，<strong>3–5 年内中国更痛</strong>：美国云厂商缺模块是「涨价 + 延期」，中国模块厂缺 DSP 是<strong>停产</strong>。中国光模块产业的形态是「组装霸权、心脏外包」。由此推出理性定位：<strong>反制牌只能是「上游材料牌」，且必然对己方产业链保留定向放行</strong>——5 月的许可放行和 3 月给云南锗业的常态化出口资质正是这个逻辑的印证。</p>
+<p><strong>测试三：对方在绕过——2–4 年的窗口期，也是我们自己的窗口期。</strong><br>Coherent 得州 Sherman 全球首座 6 英寸量产线（英伟达 20 亿美元 + CHIPS 法案 5000 万美元）；Lumentum 北卡新厂；JX 金属 1200 亿日元（产能 100% 在日本，天然免疫）；住友 180 亿日元；AXT 增发 6.325 亿美元、产能两年翻两倍。关键判断：<strong>这些新产能的时间表全部落在 2027–2030 年的缺口区间内</strong>——中国收紧许可打的不是对方的现在，而是对方扩产计划的「米」。但反过来，这 2–4 年也是中国衬底厂难得的认证窗口期，一旦对方产能落地，窗口关闭。</p>
+<p><strong>测试四：长期贬值与自噬风险。</strong><br>美国国防后勤局计划三年内建立最高 403 公吨铟战略储备，另有约 120 亿美元的「金库计划」拟储备铟、稀土、镓；长期高价会加速显示（ITO 靶材）、光伏等领域的去铟化替代研发；中际旭创等已在泰国、马来西亚布局海外产能，若美国只禁「中国原产」，海外工厂可能成为新供应源。</p>
+<h3 id="4-结论"><a href="#4-结论" class="headerlink" title="4. 结论"></a>4. 结论</h3><p><strong>定性：磷化铟是一张真实有效的「限速器」，而不是「断头台」。</strong></p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>结论</th>
+<th>置信度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>能否抬价、增不确定性、延后对方节奏</td>
+<td>能，且已经发生</td>
+<td>高</td>
+</tr>
+<tr>
+<td>能否阻止美国 AI 数据中心建设</td>
+<td>不能，缺口转化为成本上升和交付延期</td>
+<td>高</td>
+</tr>
+<tr>
+<td>能否逼迫美方在光模块禁令上让步</td>
+<td>有一定作用，属有效谈判筹码；但美方核心诉求是「去中国化」</td>
+<td>中</td>
+</tr>
+<tr>
+<td>若升级为 DSP&#x2F;EML ↔ InP 对等禁运</td>
+<td>3–5 年内中国更痛</td>
+<td>中高</td>
+</tr>
+<tr>
+<td>3–5 年后这张牌是否还这么硬</td>
+<td>价值递减（海外产能落地 + 铟回收储备 + 去铟化研发）</td>
+<td>中高</td>
+</tr>
+</tbody></table>
+<p><strong>跟踪信号</strong>——升级：美国把 DSP、200G EML 纳入对华禁运；中国把铟配额进一步下调并全面拒批衬底许可；FCC 禁令正式落地。降级：中方继续批次放行许可；中美就材料供应达成安排；海外扩产进度提前。</p>
+<h2 id="五、A-股产业链分层与核心上市公司"><a href="#五、A-股产业链分层与核心上市公司" class="headerlink" title="五、A 股产业链分层与核心上市公司"></a>五、A 股产业链分层与核心上市公司</h2><p>产业链三层，龙头不在同一层，且真正业绩兑现的只有极少数。上游是「资源弹性标的」，中游衬底「壁垒最高、弹性最大」，中游光芯片「价值量最高」，下游光模块「需求方但毛利率最低」。</p>
+<h3 id="1-上游：高纯铟-磷源-MO-源（资源弹性标的）"><a href="#1-上游：高纯铟-磷源-MO-源（资源弹性标的）" class="headerlink" title="1. 上游：高纯铟 &#x2F; 磷源 &#x2F; MO 源（资源弹性标的）"></a>1. 上游：高纯铟 &#x2F; 磷源 &#x2F; MO 源（资源弹性标的）</h3><table>
+<thead>
+<tr>
+<th>公司（代码）</th>
+<th>角色</th>
+<th>2026H1 归母净利</th>
+<th>同比</th>
+<th>PE(TTM)</th>
+<th>总市值(亿)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>锡业股份 000960</td>
+<td>全球原生铟储量与产能双龙头，6N–7N 高纯铟</td>
+<td>15.04 亿</td>
+<td>+41.6%</td>
+<td>22.96</td>
+<td>552.87</td>
+</tr>
+<tr>
+<td>株冶集团 600961</td>
+<td>锌冶炼副产铟约 60 吨&#x2F;年，6N–8N 超高纯铟</td>
+<td>19.48 亿</td>
+<td>+232.7%</td>
+<td>11.00</td>
+<td>273.58</td>
+</tr>
+<tr>
+<td>兴发集团 600141</td>
+<td>电子级超高纯红磷国产化（InP 长晶关键磷源），小试验证阶段</td>
+<td>—</td>
+<td>—</td>
+<td>21.92</td>
+<td>350.83</td>
+</tr>
+<tr>
+<td>南大光电</td>
+<td>三甲基铟 MO 源（外延必需前驱体），代码待核实</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<p>定位提醒：这一层主业仍是有色冶炼或电子材料，磷化铟只是增量故事，应称「上游弹性标的」而非「磷化铟龙头」。它们的业绩确实受益于铟价上涨（精铟由年初约 2980 元&#x2F;千克涨至 8 月约 5430 元&#x2F;千克，涨超 80%），但驱动来自铟价而非 InP 本身。</p>
+<h3 id="2-中游衬底：壁垒最高、弹性最大，也是真伪分化最严重的一层"><a href="#2-中游衬底：壁垒最高、弹性最大，也是真伪分化最严重的一层" class="headerlink" title="2. 中游衬底：壁垒最高、弹性最大，也是真伪分化最严重的一层"></a>2. 中游衬底：壁垒最高、弹性最大，也是真伪分化最严重的一层</h3><table>
+<thead>
+<tr>
+<th>公司（代码）</th>
+<th>关键事实</th>
+<th>PE(TTM)</th>
+<th>总市值(亿)</th>
+<th>属性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>云南锗业 002428</td>
+<td>A 股衬底绝对龙头。控股鑫耀半导体（华为哈勃持股 23.91%）；2–4 英寸稳定量产、6 英寸小批量交付；产能 15 万片&#x2F;年，扩产至 45 万片&#x2F;年；2026H1 磷化铟晶片产量 9.18 万片；已签 5.7–8.55 亿元长协（至 2027 年底）；已取得常态化出口许可资质</td>
+<td>845.02</td>
+<td>610.67</td>
+<td>唯一真量产</td>
+</tr>
+<tr>
+<td>光智科技 300489</td>
+<td>先导系一体化布局（高纯铟→多晶→单晶→2–6 英寸衬底）；2026H1 亏损，以晶锭毛坯为主，有效认证产能极小</td>
+<td>亏损</td>
+<td>312.58</td>
+<td>题材属性强</td>
+</tr>
+<tr>
+<td>博杰股份 002975</td>
+<td>仅持珠海鼎泰芯源 11.049% 股权（非市场传的 24.68%）；公司澄清标的连续 3 年亏损；另配套划片&#x2F;检测设备</td>
+<td>73.45</td>
+<td>218.25</td>
+<td>参股布局</td>
+</tr>
+<tr>
+<td>三安光电 600703</td>
+<td>化合物半导体 IDM，6 英寸 InP 外延国内第一（月产约 6000 片）；衬底主要外购&#x2F;自用，2026H1 归母亏损</td>
+<td>亏损</td>
+<td>647.57</td>
+<td>IDM 中军</td>
+</tr>
+</tbody></table>
+<p><strong>⚠️ 已明确澄清、但仍在概念板块内的标的（本轮最大陷阱）：</strong></p>
+<ul>
+<li><strong>有研新材 600206</strong>：市场长期将其列为「央企衬底第二梯队」，但公司已在 2026-06-30、07-01 两次公告和 08-14 互动平台答复中三次明确「<strong>公司暂无磷化铟相关产品和技术</strong>」。7 月 1 日股价跌停。截至 9-18 总市值 436.82 亿、PE(TTM) 137.37、年内涨约 155.56%。</li>
+<li><strong>欧莱新材 688631</strong>：2026-08-06 公告明确「暂无磷化铟相关产品和技术」。</li>
+<li><strong>宿迁联盛 603065</strong>：原主业高分子材料防老化助剂。6 月 8 日公告拟建年产 12 万片 4–6 英寸衬底产线，次日即收上交所问询函；回复披露合作方汇智光芯「无实际业务、无在岗员工、不持有相关专利」；6 月 15 日上交所下发监管警示。（注意：603091 是众鑫股份，勿混代码）</li>
+<li><strong>兴业科技 002674</strong>：原主业牛皮革（占收入 98.53%）。7 月 23 日以 5500 万元收购青岛立昂晶电磷化铟业务，标的总资产 1702 万、净资产 637 万、2026 年 1–5 月收入仅 234 万元、净利 -144 万元、在手订单不超 200 万、过去三年未盈利、产品不涉及光模块客户。</li>
+<li><strong>魅视科技 001229</strong>：8 月 5 日公告授权管理层开展磷化铟相关业务，处实验室阶段。</li>
+</ul>
+<h3 id="3-中下游：外延-光芯片-光模块（价值量最高的一段）"><a href="#3-中下游：外延-光芯片-光模块（价值量最高的一段）" class="headerlink" title="3. 中下游：外延 &#x2F; 光芯片 &#x2F; 光模块（价值量最高的一段）"></a>3. 中下游：外延 &#x2F; 光芯片 &#x2F; 光模块（价值量最高的一段）</h3><table>
+<thead>
+<tr>
+<th>公司（代码）</th>
+<th>环节与角色</th>
+<th>2026H1 归母净利</th>
+<th>同比</th>
+<th>毛利率</th>
+<th>PE(TTM)</th>
+<th>总市值(亿)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>源杰科技 688498</td>
+<td>InP 高速光芯片 IDM（EML&#x2F;DFB&#x2F;CW），数据中心类收入占比 83.69%；衬底全外购</td>
+<td>6.07 亿</td>
+<td>+1212.2%</td>
+<td>80.42%</td>
+<td>303.91</td>
+<td>2284.58</td>
+</tr>
+<tr>
+<td>光迅科技 002281</td>
+<td>央企「外延—芯片—模块—CPO」全栈闭环，自研光芯片自产自用</td>
+<td>5.82 亿</td>
+<td>+56.3%</td>
+<td>25.53%</td>
+<td>139.92</td>
+<td>1617.62</td>
+</tr>
+<tr>
+<td>东山精密 002384</td>
+<td>旗下索尔思光电，国内少数 200G EML 大规模量产，自建 6 英寸 InP IDM，兼产 CPO 用高功率 CW</td>
+<td>29.57 亿</td>
+<td>+290.1%</td>
+<td>20.15%</td>
+<td>100.22</td>
+<td>3592.70</td>
+</tr>
+<tr>
+<td>华工科技 000988</td>
+<td>子公司华工正源自研 InP EML&#x2F;DFB，芯片直供自家光模块</td>
+<td>11.86 亿</td>
+<td>+30.2%</td>
+<td>20.59%</td>
+<td>62.09</td>
+<td>1083.93</td>
+</tr>
+<tr>
+<td>长光华芯 688048</td>
+<td>InP 高速通信激光芯片，100G&#x2F;200G 处验证及小批量阶段，衬底外购</td>
+<td>0.30 亿</td>
+<td>+238.0%</td>
+<td>25.10%</td>
+<td>1397.90</td>
+<td>602.88</td>
+</tr>
+<tr>
+<td>海特高新 002023</td>
+<td>子公司海威华芯为稀缺 6 英寸 InP 外延代工平台，通过华为认证</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>亏损</td>
+<td>70.31</td>
+</tr>
+<tr>
+<td>中际旭创 300308</td>
+<td>全球 800G&#x2F;1.6T 光模块龙头，InP 衬底与 EML 芯片最大采购方（需求端）</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<p>（数据来源：westock-data 与各公司 2026 年半年报，行情为 2026-09-18 收盘。）</p>
+<h3 id="4-价值分布与真正的卡点"><a href="#4-价值分布与真正的卡点" class="headerlink" title="4. 价值分布与真正的卡点"></a>4. 价值分布与真正的卡点</h3><table>
+<thead>
+<tr>
+<th>环节</th>
+<th>成本&#x2F;价值占比</th>
+<th>毛利率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>外延片</td>
+<td>成本约 12%</td>
+<td>40–55%</td>
+</tr>
+<tr>
+<td>高速 EML 光芯片</td>
+<td>成本约 35%（价值占比最高）</td>
+<td>海外 60%+ &#x2F; 国内头部 45–55%</td>
+</tr>
+<tr>
+<td>衬底</td>
+<td>—</td>
+<td>40%+（云南锗业化合物半导体 47.14%）</td>
+</tr>
+<tr>
+<td>光模块整机</td>
+<td>成本约 25%</td>
+<td>25–30%（全链最低）</td>
+</tr>
+</tbody></table>
+<p>卡点：① 6 英寸大尺寸单晶生长良率（国内 60–75% vs 国际 80%+；鑫耀直收率 7–8% vs 通美约 25%）；② 高端 MOCVD&#x2F;MBE 设备（Aixtron、Veeco 双寡头）；③ 客户认证周期 12–24 个月；④ 中国侧真正的软肋是 DSP 与 200G EML。</p>
+<h3 id="5-估值与资金（截至-2026-09-18，板块数据-09-17）"><a href="#5-估值与资金（截至-2026-09-18，板块数据-09-17）" class="headerlink" title="5. 估值与资金（截至 2026-09-18，板块数据 09-17）"></a>5. 估值与资金（截至 2026-09-18，板块数据 09-17）</h3><ul>
+<li>板块 PE(TTM) <strong>81.72 倍</strong>，历史分位 <strong>89.18%</strong>；PB(LF) 6.19 倍，分位 <strong>97.13%</strong>。</li>
+<li>年内涨幅：光智科技 +342.2%、源杰科技 +314.5%、云南锗业 +194.6%、光迅科技 +179.3%、长光华芯 +172.8%、有研新材 +155.6%；三安光电 -8.14%、兴发集团 -13.94%。</li>
+<li>当日主力资金：光迅科技、长光华芯各 +6.16 亿领跑；有研新材 -1.47 亿、云南锗业净流出。</li>
+</ul>
+<p>（来源：westock-data 聚源「磷化铟晶片」概念板块，成分 14 只。）</p>
+<h2 id="六、风险清单与跟踪指标"><a href="#六、风险清单与跟踪指标" class="headerlink" title="六、风险清单与跟踪指标"></a>六、风险清单与跟踪指标</h2><h3 id="五个必须正视的风险"><a href="#五个必须正视的风险" class="headerlink" title="五个必须正视的风险"></a>五个必须正视的风险</h3><ol>
+<li><strong>估值已透支</strong>：板块 PE 分位 89%、PB 分位 97%；云南锗业 PE(TTM) 845 倍、PB 39.96 倍——而其化合物半导体收入仅占总营收 19.42%。</li>
+<li><strong>兑现时差</strong>：6 英寸衬底需 18 个月以上外延流片验证，真实业绩爆发窗口更可能在 2027H2–2028 年。</li>
+<li><strong>良率与成本代差</strong>：国内头部综合良率约 35%；「能做出来」不等于「能赚钱地做出来」。</li>
+<li><strong>上游涨价反噬中游</strong>：精铟年内涨超 80%，源杰科技等衬底全外购的芯片厂反而被挤压毛利——同一主题下不同环节利润方向可以完全相反。</li>
+<li><strong>2028–2030 年供需可能转弱平衡</strong>：JX（×7–10）、住友（×3.1）、Coherent、Lumentum、AXT 的新增产能集中释放后，价格回落会令高估值标的缺乏支撑。</li>
+</ol>
+<h3 id="应该盯的五个指标"><a href="#应该盯的五个指标" class="headerlink" title="应该盯的五个指标"></a>应该盯的五个指标</h3><ol>
+<li>6 英寸衬底良率与月度出货量（国产替代能否兑现的唯一硬指标）；</li>
+<li>头部客户认证进度（源杰 200G EML 良率约 45–50%、处验证末期；东山精密索尔思已量产）；</li>
+<li>精铟价格（上游弹性标的的业绩驱动核心）；</li>
+<li>出口许可放行节奏（批次、规模、涉及主体，直接反映管制强度）；</li>
+<li>FCC 禁令进展 + 中美是否出现 DSP&#x2F;EML 与 InP 的对等交换（决定博弈是否升级）。</li>
+</ol>
+<h3 id="优先研究顺序"><a href="#优先研究顺序" class="headerlink" title="优先研究顺序"></a>优先研究顺序</h3><p>典型规律是<strong>卡点先动，扩散后到下游</strong>：衬底（最紧缺、最早上涨）→ 光芯片（价值最高但成本被上游挤压）→ 光模块（最后、毛利最低）。按壁垒和确定性排序：云南锗业（唯一真量产衬底）＞ 源杰科技（业绩最扎实的芯片）＞ 东山精密（200G EML 量产）＞ 光迅科技（央企全栈）＞ 三安光电（IDM 中军但当期亏损）。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>磷化铟是本轮 AI 算力里「最底层的物理约束」——它不性感，但没有它，所有高速光模块都造不出来。中国在这条链上的位置是「<strong>资源强、制造弱、下游心脏外包</strong>」，所以这张反制牌真实有效但天花板有限。投资上，最需要警惕的不是看不懂产业，而是<strong>把蹭概念的公司当成产业龙头</strong>——有研新材、欧莱新材已经用公告说了实话。</p>
+<hr>
+<p><strong>主要数据来源</strong>：商务部&#x2F;海关总署出口管制公告；上市公司公告与 2026 年半年报（一手来源）；westock-data&#x2F;聚源行情与财务数据（2026-09-18 收盘）；Tech Times、钛媒体、36 氪、上海证券报、中国证券报等媒体报道及 Omdia&#x2F;Yole&#x2F;TrendForce&#x2F;LightCounting 等机构观点（经转述，需核实原文）。供需缺口与许可审批率等数据存在口径差异，不宜作为精确数字引用。</p>
+<p><strong>免责声明</strong>：以上内容基于公开数据和量化分析，仅供参考，不构成投资建议。市场有风险，投资需谨慎。任何投资决策应结合个人风险承受能力、资金状况和投资目标独立判断，必要时咨询持牌专业机构。过往表现不预示未来收益。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://zhangyongming2.github.io">明哥</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://zhangyongming2.github.io/2026/09/18/2026-09-18-%E7%A3%B7%E5%8C%96%E9%93%9FInP%E4%BA%A7%E4%B8%9A%E6%B7%B1%E5%BA%A6%E8%A7%A3%E8%AF%BB/">https://zhangyongming2.github.io/2026/09/18/2026-09-18-%E7%A3%B7%E5%8C%96%E9%93%9FInP%E4%BA%A7%E4%B8%9A%E6%B7%B1%E5%BA%A6%E8%A7%A3%E8%AF%BB/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://zhangyongming2.github.io" target="_blank">科技与财经观察</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/A%E8%82%A1/">A股</a><a class="post-meta__tags" href="/tags/%E5%85%89%E6%A8%A1%E5%9D%97/">光模块</a><a class="post-meta__tags" href="/tags/AI%E7%AE%97%E5%8A%9B/">AI算力</a><a class="post-meta__tags" href="/tags/%E7%A3%B7%E5%8C%96%E9%93%9F/">磷化铟</a><a class="post-meta__tags" href="/tags/%E5%8C%96%E5%90%88%E7%89%A9%E5%8D%8A%E5%AF%BC%E4%BD%93/">化合物半导体</a><a class="post-meta__tags" href="/tags/%E5%87%BA%E5%8F%A3%E7%AE%A1%E5%88%B6/">出口管制</a></div><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="/" media="print" onload="this.media='all'"><script src="/" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/09/23/2026-09-23-%E9%98%BF%E9%87%8C%E7%9C%9F%E6%AD%A6V900%E8%8A%AF%E7%89%87%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90-%E5%9B%BD%E4%BA%A7AI%E7%AE%97%E5%8A%9B%E6%A0%BC%E5%B1%80%E4%B8%8E%E7%AB%9E%E4%BA%89%E5%88%86%E6%9E%90/" title="阿里真武V900芯片深度解析：国产AI算力格局与竞争分析"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">阿里真武V900芯片深度解析：国产AI算力格局与竞争分析</div></div><div class="info-2"><div class="info-item-1">核心逻辑：9月22日云栖大会，平头哥发布训推一体AI芯片真武V900，单芯片性能是上代M890的3倍，216GB显存首次在单卡硬指标上压过英伟达B200和昇腾910C，2027年Q1量产（比原计划提前两个季度）。这不只是一颗芯片的发布，而是阿里”芯片—模型—云”全栈战略的正式亮牌——竞争坐标系正从”单卡对标”转向”系统级竞争”。    一、真武V900是什么：核心参数   指标 真武M890（上代） 真武V900（新一代） 提升幅度    单芯片性能 基准 3倍 +200%   显存 144GB 216GB +50%   片间互联带宽 800GB&#x2F;s 1200GB&#x2F;s +50%   计算精度 — 原生支持FP8&#x2F;FP4 覆盖训练→超低精度推理全场景   量产时间 已规模应用 2027年Q1（原计划Q3提前） —   其他关键信息：  架构：自研并行计算架构，训推一体，覆盖万亿级参数大模型训练与推理全场景 互联：通过自研ICN Switch实现千卡全带宽互联+内存统一编址，上千颗芯片像一颗”超级芯片”协同工作 系统配套：新一代磐久超节点服务器集成V90...</div></div></div></a><a class="pagination-related" href="/2026/09/11/2026-09-11-%E9%BA%BB%E5%9F%8E%E7%9F%B3%E6%9D%90%E7%9F%BF%E5%8C%BA%E9%81%93%E8%B7%AF%E8%B8%8F%E5%8B%98-%E8%BF%90%E5%8A%A8%E8%BD%A8%E8%BF%B9%E4%B8%8E%E5%BE%AA%E8%BF%B9%E5%AF%BC%E8%88%AA%E6%96%B9%E6%B3%95/" title="麻城石材矿区道路踏勘：用运动轨迹+循迹导航摸清山间路网"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">麻城石材矿区道路踏勘：用运动轨迹+循迹导航摸清山间路网</div></div><div class="info-2"><div class="info-item-1">距离上次来麻城已经有六七年了。麻城作为中部石材生产基地，片区范围约十几平方公里，这几年山上的基础设施建设力度很大，路网分支繁多，各个矿口基本都通了水泥路。 这次过来，我计划用几天时间逐步熟悉山间道路，做好记录，最终在电脑上把山体、各个矿口的位置都标注出来。下面把整套方法整理出来，供有类似踏勘需求的朋友参考。   整体思路核心是”手机记录轨迹 → 导出标准格式 → 电脑端看全局 → 手机端循迹导航“四步闭环：  用华为运动健康 APP 实地行走记录路线； 导出为 GPX 和 KML 两种通用格式； KML 导入 Google Earth Pro，在卫星图上看全局路网与矿口关系； GPX 导入华为花瓣地图，实现循迹导航、原路返回或重走。  操作步骤第一步：运动健康 APP 记录路线打开华为运动健康 APP，选择骑行或跑步模式（矿区道路颠簸，骑行模式更贴合实际车速），开始实地行走。行程结束后保存本次运动轨迹。  小提示：矿区内部分路段手机信号弱，但 GPS 定位本身不依赖手机信号，轨迹记录不受影响。建议出发前把手机充好电，长距离踏勘可以带个充电宝。  第二步：从轨迹详情页导出文件在运动...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/04/26/2026-04-26-%E5%9B%BD%E5%86%85%E5%85%89%E6%A8%A1%E5%9D%97&OCS%E9%BE%99%E5%A4%B4%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E5%85%A8%E6%99%AF%E5%88%86%E6%9E%90/" title="国内光模块&amp;OCS龙头上市公司全景分析"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-26</div><div class="info-item-2">国内光模块&amp;OCS龙头上市公司全景分析</div></div><div class="info-2"><div class="info-item-1">风险提示：本文仅为行业与公司基本面梳理，不构成任何投资建议，科技赛道估值波动大、技术迭代快、订单与业绩兑现存在不确定性。   一、基础概念厘清：光模块 vs OCS1. 光模块（Optical Module）AI算力数据传输硬件，完成光电信号互转，是服务器、交换机、数据中心互联的刚需接口；技术迭代：400G→800G→1.6T→3.2T，AI算力爆发驱动量价齐升。 2. OCS（Optical Circuit Switching，全光交换）光域交换机，无需光电转换，直接在光纤间切换光信号；解决传统电交换机多次光电转换带来的高功耗、高时延、带宽瓶颈，是AI万卡集群、超大规模智算中心下一代网络核心设备；与光模块是协同共生、上下游配套关系，非替代。  传统电交换：光→电→光（两次转换） OCS全光交换：光→直接光路切换→光（零转换，功耗降30%+、时延大幅优化）  3. 产业链关联 上游：光芯片、MEMS微镜、硅光器件 中游：光模块厂商（传输接口）+ OCS整机厂商（光路调度） 下游：英伟达&#x2F;谷歌云厂商、国内AI算力中心、运营商数据中心  二、国内光模块龙头完整分析（全球第一...</div></div></div></a><a class="pagination-related" href="/2026/04/23/2026-04-23-%E5%9B%BD%E5%86%85%E5%85%89%E6%A8%A1%E5%9D%97%E4%B8%8EOCS%E9%BE%99%E5%A4%B4%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E5%85%A8%E6%99%AF%E5%88%86%E6%9E%90/" title="国内光模块&amp;OCS龙头上市公司全景分析"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-23</div><div class="info-item-2">国内光模块&amp;OCS龙头上市公司全景分析</div></div><div class="info-2"><div class="info-item-1"> 风险提示：本文仅为行业与公司基本面梳理，不构成任何投资建议，科技赛道估值波动大、技术迭代快、订单与业绩兑现存在不确定性。   一、基础概念厘清：光模块 vs OCS光模块（Optical Module）AI算力数据传输硬件，完成光电信号互转，是服务器、交换机、数据中心互联的刚需接口。技术迭代：400G→800G→1.6T→3.2T，AI算力爆发驱动量价齐升。 OCS（Optical Circuit Switching，全光交换）光域交换机，无需光电转换，直接在光纤间切换光信号；解决传统电交换机多次光电转换带来的高功耗、高时延、带宽瓶颈，是AI万卡集群、超大规模智算中心下一代网络核心设备；与光模块是协同共生、上下游配套关系，非替代。    类型 转换次数 特点    传统电交换 光→电→光（两次转换） 高功耗、高时延   OCS全光交换 光→直接光路切换→光（零转换） 功耗降30%+、时延大幅优化   产业链关联 上游：光芯片、MEMS微镜、硅光器件 中游：光模块厂商（传输接口）+ OCS整机厂商（光路调度） 下游：英伟达&#x2F;谷歌云厂商、国内AI算力中心、运营商数据中心 ...</div></div></div></a><a class="pagination-related" href="/2026/03/02/2026-03-02-%E7%BE%8E%E4%BB%A5%E4%BC%8A%E5%86%B2%E7%AA%81%E5%8F%97%E7%9B%8A%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E7%AC%94%E8%AE%B0/" title="美以伊冲突受益上市公司笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-03-02</div><div class="info-item-2">美以伊冲突受益上市公司笔记</div></div><div class="info-2"><div class="info-item-1">本文整理美以伊战争背景下，两大核心受益板块（资源化工、军工中东外贸）的A股上市公司，按细分赛道分类，明确核心优势与受益逻辑，附风险提示。 一、资源化工板块（伊朗出口受阻+进口替代）核心逻辑：伊朗是尿素、甲醇、乙烯等产品全球核心出口国，冲突导致其出口受阻，国内具备产能、成本优势的煤化工、化肥、炼化一体化企业，受益于供给缺口扩大、产品价格上涨及进口替代需求。 1. 尿素（伊朗全球第二大出口国，年出口900-1000万吨）   公司 代码 核心优势 受益逻辑    华鲁恒升 600426 煤化工龙头，尿素产能155万吨（在建152万吨），成本控制领先 多联产柔性生产，填补伊朗尿素缺口，价格弹性大   云天化 600096 磷化工+尿素一体化，尿素产能260万吨，云南市占率约50% 资源自给率高，春耕+供给收缩双重驱动   湖北宜化 000422 磷氮一体化，尿素产能216万吨，自有煤炭配套 成本优势显著，华中&#x2F;西南市场覆盖广   中煤能源 601898 央企煤化工龙头，大颗粒尿素核心企业 产能稳定，受益全球尿素价格上行   鲁西化工 000830 尿素+甲醇一体化，产能协同 ...</div></div></div></a><a class="pagination-related" href="/2026/05/09/ascend-950-industry-chain-2026-analysis/" title="华为昇腾950产业链2026年投资分析：核心标的与业绩预期"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-09</div><div class="info-item-2">华为昇腾950产业链2026年投资分析：核心标的与业绩预期</div></div><div class="info-2"><div class="info-item-1"> 仅供参考，不构成投资建议  核心逻辑950PR已量产、下半年超节点批量上市、订单排至2027年，整机&#x2F;高速互联&#x2F;先进封装&#x2F;PCB&#x2F;液冷环节业绩弹性最大，软件与应用端同步受益。   一、产业链核心催化 芯片端：950PR（推理）2026年3月量产，全年产能75万颗，订单排至2027年；950DT（训练）Q4推出 集群端：Atlas 950 SuperPod（8192卡）下半年批量上市，DeepSeek-V4已完成全适配 需求端：字节&#x2F;阿里&#x2F;三大运营商锁定40万颗，总订单475亿元，2026年昇腾产业链营收预计820亿元 业绩拐点：Q2单卡&#x2F;小批量交付，Q3–Q4万卡集群放量，全年业绩前低后高   二、上游：芯片制造&#x2F;先进封装（业绩确定性强）中芯国际（688981） 核心绑定：950PR唯一晶圆代工，N+3工艺量产，产能满载 业绩预期：2026Q1净利+23.20%；全年代工收入**+40%+**  长电科技（600584） 核心绑定：950PR核心封测商，XDFOI Chiplet方案 业绩预期：20...</div></div></div></a><a class="pagination-related" href="/2026/09/01/2026-09-01-%E6%B6%B2%E5%86%B7%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BA%A7%E4%B8%9A%E9%93%BE%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A/" title="液冷服务器产业链深度分析报告"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-09-01</div><div class="info-item-2">液冷服务器产业链深度分析报告</div></div><div class="info-2"><div class="info-item-1">核心逻辑：AI芯片功耗突破1000W，风冷触及物理极限，液冷从”可选”升级为”必选”。2026年8月英维克中报Q2净利环比暴增1934%，叠加CDU订单排至年底、四部门强制新建大型IDC采用液冷，四重共振引爆板块。本文从产业拐点、业绩验证、订单饱满、政策加码四个维度拆解上涨逻辑，研判持续性，并挖掘飞荣达、永太科技、冰轮环境等低位正宗标的。    一、近期异动回顾8月31日，液冷服务器概念掀涨停潮，金帝股份、海鸥股份（3连板）、康盛股份（5天4板）、金富科技、冠龙节能、新朋股份、浪潮信息、艾华集团等10余股涨停，荣亿精密30cm涨停，同飞股份涨超11%。 这不是单日脉冲行情，而是产业拐点+业绩验证+订单饱满+政策加码四重因素叠加的结果。  二、上涨逻辑：四重共振2.1 产业拐点：从”可选”到”必选”AI芯片功耗已突破1000W，传统风冷触及物理极限。英伟达CEO黄仁勋在最新财报会上宣告AI算力基础设施全面迈入100%全液冷时代，Rubin平台采用全液冷架构。谷歌超80%的AI服务器已采用液冷。    年份 液冷渗透率 关键事件    2024 ~18% 技术验证期   2025 ~...</div></div></div></a><a class="pagination-related" href="/2026/04/18/%E7%8E%BB%E7%92%83%E5%9F%BA%E6%9D%BF%E4%B8%8E%E8%80%81%E5%BC%8F%E5%9F%BA%E6%9D%BF%E5%B7%AE%E5%BC%82%E5%8F%8A%E4%BA%A7%E4%B8%9A%E9%93%BE%E6%96%B0%E6%9C%BA%E4%BC%9A%E5%88%86%E6%9E%90/" title="玻璃基板与老式基板差异及产业链新机会分析"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-18</div><div class="info-item-2">玻璃基板与老式基板差异及产业链新机会分析</div></div><div class="info-2"><div class="info-item-1">一、玻璃基板 vs 老式基板：核心差异传统基板用树脂+玻璃纤维，在AI芯片时代短板尽显：    问题 老式基板 玻璃基板    受热变形 易鼓包、翘边 几乎不变形，翘边减少50%   线路数量 已达上限 提升10倍   功耗 较高 更低   厚度 较厚 更薄，适配高端AI芯片   芯片贴合 差，热胀冷缩剧烈 与硅材料贴合极佳   玻璃基板采用高端石英材料，经上千度高温熔融、精密切割等复杂工序加工，是AI芯片封装的核心骨架。 二、产业链三大核心环节① 设备环节（最上游，率先受益） 蒂尔激光：玻璃微孔激光加工设备龙头，产业扩张必先采购 华工科技：激光切割打孔，服务国内多家芯片企业 大足数控：玻璃基板加工设备全套，帮企业搭建生产线  ② 核心材料环节（最具潜力） 沃格光电：国内玻璃基板打孔加工龙头，年产能10万平米，1.6T光模块玻璃基载板已小批量送样 彩虹股份：中美”337”专利调查胜诉，自研G6玻璃基板不侵犯康宁专利，已进入北美市场 凯盛科技（央企中建材旗下）：超薄玻璃龙头，布局半导体玻璃基板，材料设备自主  ③ 关键配套环节（PSPI材料）PSPI材料是玻璃基板辅助骨架，此前全靠...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">明哥</div><div class="author-info-description">关注人工智能带来的新质生产力变化</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">73</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">267</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">35</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zhangyongming2"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%85%88%E7%BB%99%E7%BB%93%E8%AE%BA"><span class="toc-number">1.</span> <span class="toc-text">一、先给结论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%BF%99%E4%B8%AA%E6%9D%90%E6%96%99%E5%9C%A8%E5%8D%8A%E5%AF%BC%E4%BD%93%E9%87%8C%E5%88%B0%E5%BA%95%E5%B9%B2%E4%BB%80%E4%B9%88"><span class="toc-number">2.</span> <span class="toc-text">二、这个材料在半导体里到底干什么</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%80%E5%8F%A5%E8%AF%9D%E5%AE%9A%E4%BD%8D%EF%BC%9A%E5%AE%83%E6%98%AF%E3%80%8C%E5%8F%91%E5%85%89%E5%99%A8%E4%BB%B6%E3%80%8D%E7%9A%84%E5%9C%B0%E5%9F%BA"><span class="toc-number">2.1.</span> <span class="toc-text">1. 一句话定位：它是「发光器件」的地基</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%83%E5%85%B7%E4%BD%93%E9%80%A0%E5%87%BA%E5%93%AA%E4%BA%9B%E5%99%A8%E4%BB%B6"><span class="toc-number">2.2.</span> <span class="toc-text">2. 它具体造出哪些器件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%BA%E4%BB%80%E4%B9%88%E3%80%8C%E7%A1%85%E5%85%89%E3%80%8D%E5%92%8C%E3%80%8CCPO%E3%80%8D%E4%B9%9F%E7%BB%95%E4%B8%8D%E5%BC%80%E5%AE%83"><span class="toc-number">2.3.</span> <span class="toc-text">3. 为什么「硅光」和「CPO」也绕不开它</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%93%9C%E7%BC%86%E7%9A%84%E7%89%A9%E7%90%86%E5%B0%BD%E5%A4%B4"><span class="toc-number">2.4.</span> <span class="toc-text">4. 铜缆的物理尽头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%94%A8%E9%87%8F%E4%B8%8E%E5%B0%BA%E5%AF%B8%E7%9A%84%E7%BB%8F%E6%B5%8E%E5%AD%A6"><span class="toc-number">2.5.</span> <span class="toc-text">5. 用量与尺寸的经济学</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%80%E8%BF%91%E8%BF%99%E4%B9%88%E7%81%AB%EF%BC%9A%E4%B8%89%E9%87%8D%E5%85%B1%E6%8C%AF"><span class="toc-number">3.</span> <span class="toc-text">三、为什么最近这么火：三重共振</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%9C%80%E6%B1%82%E7%AB%AF%EF%BC%9AAI-%E9%9B%86%E7%BE%A4%E6%8A%8A%E5%85%89%E4%BA%92%E8%BF%9E%E5%8F%98%E6%88%90%E5%88%9A%E9%9C%80"><span class="toc-number">3.1.</span> <span class="toc-text">1. 需求端：AI 集群把光互连变成刚需</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BE%9B%E7%BB%99%E7%AB%AF%EF%BC%9A%E4%BB%8E%E7%9F%BF%E5%88%B0%E6%96%99%E7%9A%84%E5%85%A8%E9%93%BE%E6%9D%A1%E5%88%9A%E6%80%A7"><span class="toc-number">3.2.</span> <span class="toc-text">2. 供给端：从矿到料的全链条刚性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BE%9B%E9%9C%80%E7%BC%BA%E5%8F%A3%EF%BC%9A70-%E4%BB%A5%E4%B8%8A%E7%9A%84%E7%A1%AC%E7%BC%BA%E5%8F%A3"><span class="toc-number">3.3.</span> <span class="toc-text">3. 供需缺口：70% 以上的硬缺口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BB%B7%E6%A0%BC%EF%BC%9A%E7%AE%A1%E5%88%B6%E8%90%BD%E5%9C%B0%E5%90%8E%E7%9A%84%E8%B7%B3%E6%B6%A8"><span class="toc-number">3.4.</span> <span class="toc-text">4. 价格：管制落地后的跳涨</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%AE%A1%E5%88%B6%E4%B8%8E%E8%B5%84%E6%9C%AC%E6%97%B6%E9%97%B4%E7%BA%BF"><span class="toc-number">3.5.</span> <span class="toc-text">5. 管制与资本时间线</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%B8%AD%E5%9B%BD%E7%94%A8%E7%A3%B7%E5%8C%96%E9%93%9F%E5%8F%8D%E5%88%B6%E7%BE%8E%E5%9B%BD%EF%BC%8C%E7%9C%9F%E8%83%BD%E8%B5%B7%E4%BD%9C%E7%94%A8%E5%90%97"><span class="toc-number">4.</span> <span class="toc-text">四、中国用磷化铟反制美国，真能起作用吗</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BC%A0%E5%AF%BC%E9%93%BE"><span class="toc-number">4.1.</span> <span class="toc-text">1. 传导链</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%B7%B2%E7%BB%8F%E5%8F%91%E7%94%9F%E7%9A%84%E6%9D%80%E4%BC%A4%E5%8A%9B%EF%BC%9A%E5%9B%9B%E4%B8%AA%E7%A1%AC%E8%AF%81%E6%8D%AE"><span class="toc-number">4.2.</span> <span class="toc-text">2. 已经发生的杀伤力：四个硬证据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%9B%9B%E9%81%93%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95"><span class="toc-number">4.3.</span> <span class="toc-text">3. 四道压力测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%BB%93%E8%AE%BA"><span class="toc-number">4.4.</span> <span class="toc-text">4. 结论</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81A-%E8%82%A1%E4%BA%A7%E4%B8%9A%E9%93%BE%E5%88%86%E5%B1%82%E4%B8%8E%E6%A0%B8%E5%BF%83%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8"><span class="toc-number">5.</span> <span class="toc-text">五、A 股产业链分层与核心上市公司</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%8A%E6%B8%B8%EF%BC%9A%E9%AB%98%E7%BA%AF%E9%93%9F-%E7%A3%B7%E6%BA%90-MO-%E6%BA%90%EF%BC%88%E8%B5%84%E6%BA%90%E5%BC%B9%E6%80%A7%E6%A0%87%E7%9A%84%EF%BC%89"><span class="toc-number">5.1.</span> <span class="toc-text">1. 上游：高纯铟 &#x2F; 磷源 &#x2F; MO 源（资源弹性标的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%AD%E6%B8%B8%E8%A1%AC%E5%BA%95%EF%BC%9A%E5%A3%81%E5%9E%92%E6%9C%80%E9%AB%98%E3%80%81%E5%BC%B9%E6%80%A7%E6%9C%80%E5%A4%A7%EF%BC%8C%E4%B9%9F%E6%98%AF%E7%9C%9F%E4%BC%AA%E5%88%86%E5%8C%96%E6%9C%80%E4%B8%A5%E9%87%8D%E7%9A%84%E4%B8%80%E5%B1%82"><span class="toc-number">5.2.</span> <span class="toc-text">2. 中游衬底：壁垒最高、弹性最大，也是真伪分化最严重的一层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%AD%E4%B8%8B%E6%B8%B8%EF%BC%9A%E5%A4%96%E5%BB%B6-%E5%85%89%E8%8A%AF%E7%89%87-%E5%85%89%E6%A8%A1%E5%9D%97%EF%BC%88%E4%BB%B7%E5%80%BC%E9%87%8F%E6%9C%80%E9%AB%98%E7%9A%84%E4%B8%80%E6%AE%B5%EF%BC%89"><span class="toc-number">5.3.</span> <span class="toc-text">3. 中下游：外延 &#x2F; 光芯片 &#x2F; 光模块（价值量最高的一段）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BB%B7%E5%80%BC%E5%88%86%E5%B8%83%E4%B8%8E%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%8D%A1%E7%82%B9"><span class="toc-number">5.4.</span> <span class="toc-text">4. 价值分布与真正的卡点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E4%BC%B0%E5%80%BC%E4%B8%8E%E8%B5%84%E9%87%91%EF%BC%88%E6%88%AA%E8%87%B3-2026-09-18%EF%BC%8C%E6%9D%BF%E5%9D%97%E6%95%B0%E6%8D%AE-09-17%EF%BC%89"><span class="toc-number">5.5.</span> <span class="toc-text">5. 估值与资金（截至 2026-09-18，板块数据 09-17）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E9%A3%8E%E9%99%A9%E6%B8%85%E5%8D%95%E4%B8%8E%E8%B7%9F%E8%B8%AA%E6%8C%87%E6%A0%87"><span class="toc-number">6.</span> <span class="toc-text">六、风险清单与跟踪指标</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E4%B8%AA%E5%BF%85%E9%A1%BB%E6%AD%A3%E8%A7%86%E7%9A%84%E9%A3%8E%E9%99%A9"><span class="toc-number">6.1.</span> <span class="toc-text">五个必须正视的风险</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E8%AF%A5%E7%9B%AF%E7%9A%84%E4%BA%94%E4%B8%AA%E6%8C%87%E6%A0%87"><span class="toc-number">6.2.</span> <span class="toc-text">应该盯的五个指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%85%88%E7%A0%94%E7%A9%B6%E9%A1%BA%E5%BA%8F"><span class="toc-number">6.3.</span> <span class="toc-text">优先研究顺序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">7.</span> <span class="toc-text">结语</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/23/2026-09-23-%E7%9C%9F%E6%AD%A6V900%E5%88%B6%E9%80%A0%E9%93%BE%E6%B7%B1%E6%8C%96-%E4%B8%AD%E8%8A%AF%E4%BB%A3%E5%B7%A5%E4%B8%8E%E5%8D%8E%E4%B8%BA%E6%98%87%E8%85%BE%E5%B7%AE%E5%BC%82%E5%8F%8A%E6%A0%B8%E5%BF%83%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8/" title="真武V900制造链深挖：中芯代工、制程卡点、与华为昇腾的差异及核心上市公司">真武V900制造链深挖：中芯代工、制程卡点、与华为昇腾的差异及核心上市公司</a><time datetime="2026-09-23T00:06:00.000Z" title="发表于 2026-09-23 08:06:00">2026-09-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/23/2026-09-23-%E9%98%BF%E9%87%8C%E7%9C%9F%E6%AD%A6V900%E8%8A%AF%E7%89%87%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90-%E5%9B%BD%E4%BA%A7AI%E7%AE%97%E5%8A%9B%E6%A0%BC%E5%B1%80%E4%B8%8E%E7%AB%9E%E4%BA%89%E5%88%86%E6%9E%90/" title="阿里真武V900芯片深度解析：国产AI算力格局与竞争分析">阿里真武V900芯片深度解析：国产AI算力格局与竞争分析</a><time datetime="2026-09-23T00:05:00.000Z" title="发表于 2026-09-23 08:05:00">2026-09-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/18/2026-09-18-%E7%A3%B7%E5%8C%96%E9%93%9FInP%E4%BA%A7%E4%B8%9A%E6%B7%B1%E5%BA%A6%E8%A7%A3%E8%AF%BB/" title="磷化铟（InP）深度解读：AI算力的「光之地基」与中国的反制牌">磷化铟（InP）深度解读：AI算力的「光之地基」与中国的反制牌</a><time datetime="2026-09-18T10:30:00.000Z" title="发表于 2026-09-18 18:30:00">2026-09-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/11/2026-09-11-%E9%BA%BB%E5%9F%8E%E7%9F%B3%E6%9D%90%E7%9F%BF%E5%8C%BA%E9%81%93%E8%B7%AF%E8%B8%8F%E5%8B%98-%E8%BF%90%E5%8A%A8%E8%BD%A8%E8%BF%B9%E4%B8%8E%E5%BE%AA%E8%BF%B9%E5%AF%BC%E8%88%AA%E6%96%B9%E6%B3%95/" title="麻城石材矿区道路踏勘：用运动轨迹+循迹导航摸清山间路网">麻城石材矿区道路踏勘：用运动轨迹+循迹导航摸清山间路网</a><time datetime="2026-09-11T10:00:00.000Z" title="发表于 2026-09-11 18:00:00">2026-09-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/09/02/2026-09-02-%E5%85%89%E4%BC%8F%E8%A1%8C%E4%B8%9A%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A/" title="光伏行业深度研究报告：从产业链末端看出清与技术迭代">光伏行业深度研究报告：从产业链末端看出清与技术迭代</a><time datetime="2026-09-02T08:30:00.000Z" title="发表于 2026-09-02 16:30:00">2026-09-02</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 明哥</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
